@@ -1,4 +1,4 @@
-# Taller: Ideando la cuiudad del futuro 
+# Taller: Ideando la ciudad del futuro 
 
 Este es el respositorio del taller "Ideando la cuiudad del futuro" promovido por la Universidad Carlos III de Madrid como actividad para los viernes tecnológicos para 2019.
 
