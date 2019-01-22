@@ -13,6 +13,6 @@ Posteriormente, podrás poner en práctica unas demostraciones diseñada en excl
 
 AppInventor es un entorno de desarrollo de aplicaciones moviles elaborado por el MIT (Massachusetts Institute of Technology) con la inención de generar un entorno sencillo de aprendizaje y contrucción de aplicaciones móviles
 
-![NodeMCU](https://github.com/monicadefran/Ideando_la_ciudad_digital/blob/master/recursos%20tutoriales/Imagen_portada.png)
-(https://raw.githubusercontent.com/monicadefran/Ideando_la_ciudad_digital/tree/master/recursos%20tutoriales/Imagen_portada.png)
+![AppInventor](https://github.com/monicadefran/Ideando_la_ciudad_digital/blob/master/recursos%20tutoriales/Imagen_portada.png)
+
 
