@@ -1,15 +1,16 @@
-# Taller Internet of Things: Dispara tu creatividad y sé tu también un inventor
+# Taller "Ideando la cuiudad del futuro" 
 
-Este es el respositorio del taller de introducción a Internet of Things titulado Dispara tu creatividad y sé tu también un inventor. Este taller está promovido por la Universidad Carlos III de Madrid como evento para la Semana de la Ciencia 2016.
+Este es el respositorio del taller "Ideando la cuiudad del futuro" promovido por la Universidad Carlos III de Madrid como actividad para los viernes tecnológicos 2019.
 
-En este taller además de hacer una introducción eminentemente práctica de Internet of Things se fomentará el interés de investigar poniendo de relieve la figura de Torres Quevedo con motivo de la celebración del Año Torres Quevedo.
+En este taller los participantes plantearán soluciones algunos de los problemas que afrontamos y se afrontarán en las grandes cuidades. La idea principal es desarrollar aplicaciones móviles que sean capaces de generar nuevas experiencias dentro de nuestras realidades cotidianas, con la finalidad de ayudar a mejorar la vida en las ciudades desde una perspectiva cívica.  
+Para la realización del taller contaremos con nuestros smartphones y el entorno de desarrollo de aplicaciones AppInventor. El objetivo es explorar el potencial de estas posibles aplicaciones dentro de espacios urbanos.   
 
-[Presentación de Leonardo Torres Quevedo](https://ysinotelodigo.github.io/TallerIoT/presentacion%20TQ%20IoT/)
+[Presentación del taller "Ideando la cuiudad del futuro" ](https://ysinotelodigo.github.io/TallerIoT/presentacion%20TQ%20IoT/)
 
-[Nueva Página para seguir los tutoriales](https://ysinotelodigo.github.io/TallerIoT/workshop)
+[Web para seguir los tutoriales](https://ysinotelodigo.github.io/TallerIoT/workshop)
 
 Posteriormente, podrás poner en práctica unas demostraciones diseñada en exclusiva para el taller que te despertará tu creatividad para futuros diseños e ideas.
 
-La placa que se utilizará en este taller es la NodeMCU que cuenta con un microcontrolador ESP8266 que tiene la posibilidad de conectarse a redes wifi para acceder a Internet además poder llegar a crear puntos de acceso Wifi.
+AppInventor es un entorno de desarrollo de aplicaciones moviles elaborado por el MIT (Massachusetts Institute of Technology) con la inención de generar un entorno sencillo de aprendizaje y contrucción de aplicaciones móviles
 
 ![NodeMCU](https://raw.githubusercontent.com/ysinotelodigo/TallerIoT/master/recursos%20tutoriales/nodeMCU.png)
