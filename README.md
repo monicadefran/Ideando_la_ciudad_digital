@@ -6,7 +6,7 @@ En este taller los participantes plantearán soluciones algunos de los problemas
 
 [Presentación del taller "Ideando la cuiudad del futuro" ](https://ysinotelodigo.github.io/TallerIoT/presentacion%20TQ%20IoT/) 
 
-[Web para seguir los tutoriales](https://ysinotelodigo.github.io/TallerIoT/workshop)
+[Web para seguir los tutoriales](https://monicadefran/Ideando_la_ciudad_digital/tree/master/workshop)
 
 Posteriormente, podrás poner en práctica unas demostraciones diseñada en exclusiva para el taller que te despertará tu creatividad para futuros diseños e ideas.
 
