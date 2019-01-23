@@ -10,7 +10,7 @@ Siguendo un proceso de diseño colaborativo, hemos diseñado especificamente par
 
 ![Cartas](https://github.com/monicadefran/Ideando_la_ciudad_digital/blob/master/recursos%20tutoriales/cartas_portada.jpg)
 
-Posteriormente, seguiremos una serie de tutoriales de AppInventor, desarrollados a proposio del taller, que ayudarán a las participantes a construir una aplicación móvil y ver el postencial de este entorno para despertará tu creatividad para futuros diseños e ideas. 
+Posteriormente, seguiremos una serie de tutoriales de AppInventor, desarrollados a proposito del taller, que ayudarán a las participantes a construir una aplicación móvil y ver el potencial de este entorno, con la finalidad de despertar su creatividad para futuros diseños e ideas.  
  
 [Web para seguir los tutoriales](https://monicadefran.github.io/Ideando_la_ciudad_digital/)
 
