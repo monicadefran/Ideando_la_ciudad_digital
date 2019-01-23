@@ -6,7 +6,7 @@ En este taller los participantes plantearán soluciones algunos de los problemas
 
 [Presentación del taller "Ideando la cuiudad del futuro" ]() 
 
-Siguendo un proceso de diseño colaborativo, hemos diseñado especificamente para este taller una serie de cartas que ayudarán a las participantes a proponer soluciones a partir de unas problemáticas propuestas. 
+Siguiendo un proceso de diseño colaborativo, hemos diseñado especificamente para este taller una serie de cartas que ayudarán a las participantes a proponer soluciones a partir de unas problemáticas propuestas. 
 
 ![Cartas](https://github.com/monicadefran/Ideando_la_ciudad_digital/blob/master/recursos%20tutoriales/cartas_portada.jpg)
 
