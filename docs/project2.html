@@ -45,14 +45,14 @@
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Tutorial 2:
-        <small>¡Hola Mundo! Hello World!</small>
+        <small>¡Hola Mundo! / Hello World!</small>
       </h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Home</a>
         </li>
-        <li class="breadcrumb-item active">Tutorial 2: ¡Hola Mundo! Hello World!</li>
+        <li class="breadcrumb-item active">Tutorial 2: ¡Hola Mundo! / Hello World!</li>
       </ol>
 
       <!-- Intro Content -->
@@ -62,22 +62,36 @@
         </div>
         <div class="col-12 col-md-6">
           <h2>Objetivo:</h2>
-          <p>En este primer proyecto se explicarán los primeros pasos que se han de seguir para lograr compilar, subir el código a la placa, ejecutar y depurar nuestro primer código.</p>
+          <p>El objetivo principal de este proyecto es mostrar los conceptos más básicos de la herramienta App Inventor al mismo tiempo que se desarrolla un proyecto.</p>
         </div>
 <div class="col-12">
            <h2>Conceptos Básicos:</h2>
 
 <ul>
-    <li>Compilar: Acción de transformar el código o código fuente ("entendible" por el ser humano) a código máquina que un ordenador o microcontrolador es capaz de entender.</li>
-    <li>Subir el código a la placa: Acción que el ordenador realiza de transferir este código que es entendible por la placa a la memoria del microcontrolador.</li>
-    <li>Ejeucutar: Acción que realiza la placa cuando ejecuta el código máquina alojado en su memoria.</li>
-    <li>Depurar: Acción de analizar qué está haciendo el código. Útil para conocer si nuestro código fuciona correctamente</li>
+    <li>Interfaz de Usuario: Es el medio por el que los usuarios se pueden comunicar con las máquinas, computadoras o dispositivos y viceversa. Ejemplo: Pantalla de móvil, teclado de ordenador, altavoz, micrófono…</li>
+    <li>Convertir el código fuente (texto “entendible” por el ser humano) u otra representación de lógica/acciones en un código comprensible por un ordenador.</li>
 </ul>
 
 <h2>Pasos a Seguir</h2>
 <ol>
-    <li>Abra el entorno Arduino IDE.</li>
-    <li>Conecte la placa NodeMCU y configurar el entorno si no se ha hecho anteriormente.</li>
+    <li>Abrir el entorno de desarrollo App Inventor.</li>
+    a.	http://appinventor.mit.edu/explore/#
+    b.	Pulsar el botón create app!
+    <li>Selecciona una cuenta de Google</li>
+    <li>Pulsa el botón “Start new proyect”</li>
+
+    Una vez creado el proyecto podremos acceder a la interfaz de App Inventor que está compuesta por dos pestañas principales: Designer y Blocks.
+Designer permite diseñar la interfaz de la aplicación que se desarrolla arrastrando los componentes desde el margen izquierdo al Viewer. Las propiedades de los componentes pueden ser modificados en el margen derecho. 
+Blocks permite definir la lógica de la aplicación mediante bloques. Para ello, basta con mover los componentes del margen derecho que intervienen en la lógica al lienzo y describir la lógica.
+
+
+    <li>4.	Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las siguientes propiedades del componente:</li>
+    a.	FontBold: “marcado” (hará que el texto esté en negrita)
+b.	FontSize: 28 (hará que el texto sea más grande)
+c.	Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)
+d.	TextAligment: “Center: 1” (hará que el texto esté centrado)
+e.	Text: “Welcome UC3M!” (cambiará el texto que se muestra)
+
     <li>Presione el botón para copiar el siguiente código en el portapapeles:</li>
     <div class="my-3 card">
        
