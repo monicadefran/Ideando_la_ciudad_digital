@@ -75,18 +75,18 @@
 <h2>Pasos a Seguir</h2>
 <ol>
     <li>Abrir el entorno de desarrollo App Inventor.
-      <ol start="a">
+      <ol type="a">
         <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
         <li>Pulsar el botón create app!</li>
+        <li>Selecciona una cuenta de Google</li>
       </ol>
     </li>
-    <li>Selecciona una cuenta de Google</li>
     <li>Pulsa el botón “Start new proyect”</li>
     Una vez creado el proyecto podremos acceder a la interfaz de App Inventor que está compuesta por dos pestañas principales: Designer y Blocks.
 Designer permite diseñar la interfaz de la aplicación que se desarrolla arrastrando los componentes desde el margen izquierdo al Viewer. Las propiedades de los componentes pueden ser modificados en el margen derecho. 
 Blocks permite definir la lógica de la aplicación mediante bloques. Para ello, basta con mover los componentes del margen derecho que intervienen en la lógica al lienzo y describir la lógica.
     <li>Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las siguientes propiedades del componente:
-      <ol start="a">
+      <ol type="a">
         <li>FontBold: “marcado” (hará que el texto esté en negrita)</li>
         <li>FontSize: 28 (hará que el texto sea más grande)</li>
         <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
@@ -96,88 +96,99 @@ Blocks permite definir la lógica de la aplicación mediante bloques. Para ello,
     </li>
 
     <li>Arrastra el componente VerticalArrangement del margen derecho (Palette-> Layout) debajo de la etiqueta anterior. Este componente permite colocar los elementos horizontalmente. Cambia las siguientes propiedades del componente:
-      <ol start="a">
+      <ol type="a">
         <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente)</li>
         <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
       </ol>
     </li>
 
-    <li>Presione el botón para copiar el siguiente código en el portapapeles:</li>
+    <li>Arrastra el componente Label y TextBox (Palette->User Interface) dentro del componente anterior. Cambia las siguientes propiedades de los componentes:
+      <ol type="a">
+        <li>Label.Text: “Name:” (cambiará el texto que se muestra)</li>
+        <li>Textbox.Hint: “Ciudad” (cambiará el texto de placeholder)</li>
+      </ol>
+    </li>
+    
+    <li>Arrastra el componente Image (Palette-> User Interface) debajo del contenedor horizontal. Cambia las siguientes propiedades del componente:
+        <ol type="a">
+          <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+          <li>Picture->Upload File->Examinar… y selecciona la siguiente imagen tras descargarla: (cambiará la imagen a mostrar)</li>
+        </ol>
+        <div class="my-3 card">
+            <div class="card-body text-center">
+        <img src="images/upload.png" alt="botón de upload" />
+        </div>
+        <div class="card-footer small text-muted">
+            <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+        </div>
+        </div>
+    </li>
+
+    <li>Arrastra el componente Button (Palette-> User Interface) debajo de la imagen anterior.
+        <ol type="a">
+          <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+          <li>b.	Text: “Greetings:” (cambiará el texto del botón)</li>
+        </ol>
+    </li>
+
+    <li>Arrastra el componente Notifier (Palette-> User Interface) en el visor. Este componente aparece incluido en componente no visuales.</li>
+
+    <li>Cambia a la pestaña Blocks (Arriba a la derecha)
     <div class="my-3 card">
-       
-            <div class="card-header" style="font-weight: bold;">
-                <i class="fas fa-code"></i> Código Hola Mundo / Hello World</div>
-            <div class="card-body" id="code" style="font-family: Courier New;font-size: 0.7em;">
-                    <br>
-                    void setup() {<br>
-                    &nbsp;&nbsp;// Este método se ejecuta una sola vez (Se ejecuta el primero de todos)<br>
-                      <br>
-                    &nbsp;&nbsp;// La siguiente línea indica que la placa se comunicará a una velocidad de 9600 bits por segundo*<br>
-                    &nbsp;&nbsp;Serial.begin(9600);<br>
-                    }<br>
-                    <br>
-                    void loop() {<br>
-                    &nbsp;&nbsp;// Este método se ejecutará de manera infinita<br>
-                      <br>
-                    &nbsp;&nbsp;// La siguiente línea enviar un mensaje desde la placa al ordenador<br>
-                    &nbsp;&nbsp;Serial.println("¡Hola! Soy la placa NodeMCU y te estoy escribiendo por el cable usb :-)");<br>
-                      <br>
-                    &nbsp;&nbsp;// La siguiente línea indica cuantos milisegundos esperará o dormirá la placa (1000 milisegundos = 1 segundo)<br>
-                    &nbsp;&nbsp;delay(3000);<br>
-                    }<br>
-                    <br>
-                    <br>
-                    /* * En Internet en algunos tutoriales sobre Arduino y otras placas puede encontrase el término "bits por segundos" <br>
-                     *  intercambiado por baudios. En este caso concreto son equivalente dado que en cada estado de la señal se envia<br>
-                     *  un único bit pero no tiene porque ser así en todos los casos por lo tanto "bits por segundos" y baudios no<br>
-                     *  siempre son equivalentes.<br>
-                     */<br>
-                    <br>
-                  </div>
-            <div class="card-footer small text-muted">
-                <button type="button" class="btn btn-success btn-block"  onclick="copyToClipboard('#code','#copyButton')" id="copyButton">Presionar para copiar el código en el portapapeles</button>
-            </div>
-          
-
-</div>
-
-
-<li>Pulse sobre el segundo botón (el que parece una fecha hacia la derecha) de la parte superior derecha.</li>
-<div class="my-3 card">
-    <div class="card-body text-center">
-<img src="images/upload.png" alt="botón de upload" />
-</div>
-<div class="card-footer small text-muted">
-    Botón para subir ("upload") el código a la placa.
-</div>
-</div>
-<li>Espere a que el entorno transfiera el código a la placa. (Podrás observar una barra de progreso en la consola inferior que hay en la ventana del entorno y un led que está parpadeando en la NodeMCU).</li>
-
-<li>Pulse el botón que se encuentra en la parte superior derecha (el que aparece una lupa).</li>
-<div class="my-3 card">
-    <div class="card-body text-center">
-<img  src="images/monitor.png" alt="botón del monitor serial" />
-</div>
-<div class="card-footer small text-muted">
-    Botón para acceder al cable serial.
-</div>
-</div>
-
-<li>Prodrá observar cómo la placa NodeMCU se está comunicando con el ordenador por el cable USB.</li>
-
-<div class="my-3 card">
-    <div class="card-body text-center">
-        <img src="images/holaMundoTutorial.png" alt="Consola Hola Mundo" />
+        <div class="card-body text-center">
+    <img  src="images/monitor.png" alt="botón del monitor serial" />
     </div>
+    <div class="card-footer small text-muted">
+        Botón para acceder al cable serial.
+    </div>
+  </li>
+    <li>Selecciona el componente botón de la derecha y arrastra el lienzo el siguiente bloque:
+    <div class="my-3 card">
+        <div class="card-body text-center">
+    <img  src="images/monitor.png" alt="botón del monitor serial" />
+    </div>
+    <div class="card-footer small text-muted">
+        Botón para acceder al cable serial.
+    </div>
+  </li>
+  <li>Construye el siguiente bloque arrastrando los bloques. El bloque de marrón indique que cuando se haga “Click” sobre el botón se hará lo que hay dentro. El bloque morado hace que se muestre una alerta con el texto que se conecta. Los dos bloques magentas uno une dos textos y otro es el valor de texto “hello, “. El bloque azulverdoso toma el valor que hay dentro del TextBox.
+      <div class="my-3 card">
+          <div class="card-body text-center">
+      <img  src="images/monitor.png" alt="botón del monitor serial" />
+      </div>
+      <div class="card-footer small text-muted">
+          Botón para acceder al cable serial.
+      </div>
+    </li>
+  <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
+    <div class="my-3 card">
+        <div class="card-body text-center">
+    <img  src="images/monitor.png" alt="botón del monitor serial" />
+    </div>
+    <div class="card-footer small text-muted">
+        Botón para acceder al cable serial.
+    </div>
+  </li>
+   
+  <li>Abre la aplicación App Inventor desde el móvil y escanea el código QR.
+      <div class="my-3 card">
+          <div class="card-body text-center">
+      <img  src="images/monitor.png" alt="botón del monitor serial" />
+      </div>
+      <div class="card-footer small text-muted">
+          Botón para acceder al cable serial.
+      </div>
+    </li>
 
-<div class="card-footer small text-muted">
-    Captura de pantalla de los mensajes que se reciben del cable serial.
-</div>
-</div>
-
-</ol>
-
-
+    <li>Instala la aplicación y pruébala. 
+        <div class="my-3 card">
+            <div class="card-body text-center">
+        <img  src="images/monitor.png" alt="botón del monitor serial" />
+        </div>
+        <div class="card-footer small text-muted">
+            Botón para acceder al cable serial.
+        </div>
+      </li>
 
 <h2>Explicación General del Código</h2>
 
