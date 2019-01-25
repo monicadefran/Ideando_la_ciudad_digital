@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>IoT Workshop</title>
+    <title>Ideando la Ciudad Digital Workshop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">IoT Workshop</a>
+        <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,39 +45,62 @@
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Tutorial 3:
-        <small>Proyecto Led</small>
+        <small>Cash Register</small>
       </h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Home</a>
         </li>
-        <li class="breadcrumb-item active">Tutorial 3: Proyecto Led</li>
+        <li class="breadcrumb-item active">Tutorial 3: Cash Register</li>
       </ol>
 
       <!-- Intro Content -->
       <div class="row">
         <div class="col-12 col-md-6">
-          <img class="img-fluid rounded mb-4" src="images/mainLed.jpg" alt="">
+          <img class="img-fluid rounded mb-4" src="images/project3.png" alt="">
         </div>
         <div class="col-12 col-md-6">
           <h2>Objetivo:</h2>
-          <p>El objetivo de este ejemplo es permitir un primer contacto con la placa NodeMCU, la protoboard y algunos componentes electrónicos.</p>
+          <p>El objetivo de este ejemplo es mostrar cómo se importar un proyecto desde el ordenador, cómo se leen código QR o código de barra.</p>
         </div>
 <div class="col-12">
      <h2>Pasos a Seguir</h2>
 <ol>
-    <li>Desconecte el cable usb de la placa o del ordenador (con el objetivo de evitar cortocircuitos).</li>
-    <li>Coloque la parte lateral donde aparecen más pines con el prefijo "D" conectada a la placa en la primera columna. Los demás pines quedarán en el aire como en la imagen.</li>
-
-<div class="my-3 card">
-    <div class="card-body text-center">
-        <img src="images/baseInicial.png" alt="Base Inicial"/>
-</div>
-<div class="card-footer small text-muted">
-    Protoboard conectada con la NodeMCU.
-</div>
-</div>
+    <li>Abrir el entorno de desarrollo App Inventor.
+        <ol type="a">
+          <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
+          <li>Pulsar el botón create app!</li>
+          <li>Selecciona una cuenta de Google</li>
+        </ol>
+      </li>
+      <li>Pulsa el menú Projects -> Import project (.aia) from my computer... (Descargar el proyecto que se proporciona en el botón) </li>
+  <div class="my-3 card">
+      <div class="card-body text-center">
+        <img  src="images/import.png" alt="Pestaña designer" class="img-fluid"/>
+      </div>
+      <div class="card-footer small text-muted">
+          <a href="projects/cashRegister.aia" download="city.jpg"> 
+            <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar proyecto (.aia) </button>
+          </a>
+    </div>
+  </div>
+  <li>Cambia a la pestaña Blocks (Arriba a la derecha)
+      <div class="my-3 card">
+          <div class="card-body text-center">
+      <img  src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
+      </div>
+      <div class="card-footer small text-muted">
+          Pestaña para cambiar a modo desarrollador de lógica.
+      </div>
+      </li>
+  
+      <li>Arrastra el componente VerticalArrangement del margen derecho (Palette-> Layout) debajo de la etiqueta anterior. Este componente permite colocar los elementos horizontalmente. Cambia las siguientes propiedades del componente:
+        <ol type="a">
+          <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente)</li>
+          <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+        </ol>
+      </li>
 
     <li>Coloque una resistencia de 220 Ohmios (cualquiera del kit) que haga de puente en la fila donde se encuentre el pin D5 como en la imagen.</li>
 
