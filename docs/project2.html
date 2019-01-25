@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">IoT Workshop</a>
+        <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -85,6 +85,21 @@
     Una vez creado el proyecto podremos acceder a la interfaz de App Inventor que está compuesta por dos pestañas principales: Designer y Blocks.
 Designer permite diseñar la interfaz de la aplicación que se desarrolla arrastrando los componentes desde el margen izquierdo al Viewer. Las propiedades de los componentes pueden ser modificados en el margen derecho. 
 Blocks permite definir la lógica de la aplicación mediante bloques. Para ello, basta con mover los componentes del margen derecho que intervienen en la lógica al lienzo y describir la lógica.
+<div class="my-3 card">
+    <div class="card-body text-center">
+<img  src="images/designer.png" alt="Pestaña designer" />
+</div>
+<div class="card-footer small text-muted">
+    Pestaña de Diseño de Interfaz de Usuario
+</div>
+<div class="my-3 card">
+    <div class="card-body text-center">
+<img  src="images/blocks.png" alt="Pestaña designer" />
+</div>
+<div class="card-footer small text-muted">
+    Pestaña de Implementación de la Lógica
+</div>
+
     <li>Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las siguientes propiedades del componente:
       <ol type="a">
         <li>FontBold: “marcado” (hará que el texto esté en negrita)</li>
@@ -119,7 +134,9 @@ Blocks permite definir la lógica de la aplicación mediante bloques. Para ello,
         <img src="images/ciudad.png" alt="botón de upload" />
         </div>
         <div class="card-footer small text-muted">
+          <a href="images/ciudad.png" download="city"> 
             <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+          </a>
         </div>
         </div>
     </li>
@@ -127,7 +144,7 @@ Blocks permite definir la lógica de la aplicación mediante bloques. Para ello,
     <li>Arrastra el componente Button (Palette-> User Interface) debajo de la imagen anterior.
         <ol type="a">
           <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
-          <li>b.	Text: “Greetings:” (cambiará el texto del botón)</li>
+          <li>Text: “Greetings:” (cambiará el texto del botón)</li>
         </ol>
     </li>
 
@@ -136,37 +153,37 @@ Blocks permite definir la lógica de la aplicación mediante bloques. Para ello,
     <li>Cambia a la pestaña Blocks (Arriba a la derecha)
     <div class="my-3 card">
         <div class="card-body text-center">
-    <img  src="images/monitor.png" alt="botón del monitor serial" />
+    <img  src="images/blockTab.png" alt="botón del monitor serial" />
     </div>
     <div class="card-footer small text-muted">
-        Botón para acceder al cable serial.
+        Pestaña para cambiar a modo desarrollador de lógica.
     </div>
-  </li>
+    </li>
     <li>Selecciona el componente botón de la derecha y arrastra el lienzo el siguiente bloque:
     <div class="my-3 card">
         <div class="card-body text-center">
-    <img  src="images/monitor.png" alt="botón del monitor serial" />
+    <img  src="images/botonClick.png" alt="botón del monitor serial" />
     </div>
     <div class="card-footer small text-muted">
-        Botón para acceder al cable serial.
+        Arrastrar la lógica de hacer click sobre el botón.
     </div>
   </li>
   <li>Construye el siguiente bloque arrastrando los bloques. El bloque de marrón indique que cuando se haga “Click” sobre el botón se hará lo que hay dentro. El bloque morado hace que se muestre una alerta con el texto que se conecta. Los dos bloques magentas uno une dos textos y otro es el valor de texto “hello, “. El bloque azulverdoso toma el valor que hay dentro del TextBox.
       <div class="my-3 card">
           <div class="card-body text-center">
-      <img  src="images/monitor.png" alt="botón del monitor serial" />
+      <img  src="images/firstProjectBlocks.png" alt="botón del monitor serial" />
       </div>
       <div class="card-footer small text-muted">
-          Botón para acceder al cable serial.
+          Lógica de la aplicación para mostrar un mensaje.
       </div>
     </li>
   <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
     <div class="my-3 card">
         <div class="card-body text-center">
-    <img  src="images/monitor.png" alt="botón del monitor serial" />
+    <img  src="images/buildQRCode.png" alt="botón del monitor serial" />
     </div>
     <div class="card-footer small text-muted">
-        Botón para acceder al cable serial.
+        Pestaña para compilar y descargar la aplicación.
     </div>
   </li>
    
