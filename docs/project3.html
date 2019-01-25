@@ -95,96 +95,64 @@
       </div>
       </li>
   
-      <li>Arrastra el componente VerticalArrangement del margen derecho (Palette-> Layout) debajo de la etiqueta anterior. Este componente permite colocar los elementos horizontalmente. Cambia las siguientes propiedades del componente:
-        <ol type="a">
-          <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente)</li>
-          <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
-        </ol>
+      <li>Lo primero de todo se creará una lista vacia que irá almacenando los precios que se lean
+          <div class="my-3 card">
+              <div class="card-body text-center">
+          <img  src="images/createList.png" alt="variable con lista vacia" class="img-fluid" />
+          </div>
+          <div class="card-footer small text-muted">
+              Creación de una lista vacia
+          </div>
       </li>
 
-    <li>Coloque una resistencia de 220 Ohmios (cualquiera del kit) que haga de puente en la fila donde se encuentre el pin D5 como en la imagen.</li>
+      <li>Tras ello se indicará que tras pulsar el botón se encenderá el modo leer código de barras o código QR
+          <div class="my-3 card">
+              <div class="card-body text-center">
+          <img  src="images/activarQRReader.png" alt="variable con lista vacia" class="img-fluid" />
+          </div>
+          <div class="card-footer small text-muted">
+              Inicio de lectura de Código QR o Código de Barras tras pulsar el botón
+          </div>
+      </li>
+      <li>En la última parte de la lógica se indicará que tras leer un código QR o de barras si el valor es numérico entonces se generá un valor aleatorio de precio, se hará un sonido de caja registradora, se añadirá el valor generado aleatoriamente a la variable que contiene la lista de precios, se mostrará la lista de precios para finalmente calcular el total. Si el valor leido no es un número se mostrará un mensaje de error.
+          <div class="my-3 card">
+              <div class="card-body text-center">
+          <img  src="images/leyendoCodigoQR.png" alt="variable con lista vacia" class="img-fluid" />
+          </div>
+          <div class="card-footer small text-muted">
+              Lógica tras leer el código de barras o código QR
+          </div>
+      </li>
 
-
-<div class="my-3 card">
-    <div class="card-body text-center">
-        <img src="images/resistenciaD5.png" alt="Resistencia D5"/>
-</div>
-<div class="card-footer small text-muted">
-    Resistencia conectada con el pin D5.
-</div>
-</div>
-
-
-    <li>Seleccione cualquier led del kit y conectarlo de la siguiente forma. El pin que es más largo (ánodo (+)) deberá ir conectado en la otra fila donde salte la resistencia y el pin más corto (cátodo (-)) en la fila superior o inferior. Por último conectar un cable con la fila seleccionada donde esté el pin más corto del led con cualquier fila que ponga la letra G de Ground (Tierra). El esquema debe quedar parecido a la imagen.</li>
-
-<div class="my-3 card">
-    <div class="card-body text-center">
-        <img src="images/led.png" alt="Led"/>
-</div>
-<div class="card-footer small text-muted">
-    Circuto completado.
-</div>
-</div>
-
-    <li>Conecte la placa al ordenador por el cable usb.</li>
-    <li>Abra el entorno y copiar el siguiente código:</li>
-    <div class="my-3 card">
-       
-        <div class="card-header" style="font-weight: bold;">
-            <i class="fas fa-code"></i> Código Led</div>
-        <div class="card-body" id="code" style="font-family: Courier New;font-size: 0.7em;">
-<br>
-void setup() {<br>
-&nbsp;&nbsp;// Este método se ejecuta una sola vez (Se ejecuta el primero de todos)<br>
-  <br>
-&nbsp;&nbsp;// La siguiente línea indica que la placa se comunicará a una velocidad de 9600 bits por segundo*<br>
-&nbsp;&nbsp;Serial.begin(9600);<br>
-&nbsp;&nbsp;// La siguiente línea indica que el pin D5 será de salida (devolverá 0v cuando la señal sea baja y 3.3V cuando la señal sea alta)<br>
-&nbsp;&nbsp;pinMode(D5,OUTPUT);<br>
-}<br>
-<br>
-void loop() {<br>
-&nbsp;&nbsp;// Este método se ejecutará en bucle de manera infinita<br>
-  <br>
-&nbsp;&nbsp;// La siguiente línea enviar un mensaje desde la placa al ordenador<br>
-&nbsp;&nbsp;Serial.println("Enciendo el Led");<br>
-&nbsp;&nbsp;// Indica que se devuelva el nivel alto (3.3v) por el pin D5<br>
-&nbsp;&nbsp;digitalWrite(D5,HIGH);<br>
-&nbsp;&nbsp;// La siguiente línea indica cuantos milisegundos esperará o dormirá la placa (1000 milisegundos = 1 segundo)<br>
-&nbsp;&nbsp;delay(2000);<br>
-<br>
-&nbsp;&nbsp;// La siguiente línea enviar un mensaje desde la placa al ordenador<br>
-&nbsp;&nbsp;Serial.println("Apaga  el Led");<br>
-&nbsp;&nbsp;// Indica que se devuelva el nivel bajo (0v) por el pin D5<br>
-&nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-&nbsp;&nbsp;// La siguiente línea indica cuantos milisegundos esperará o dormirá la placa (1000 milisegundos = 1 segundo)<br>
-&nbsp;&nbsp;delay(2000);<br>
-  <br>
-}<br>
-<br>
-<br>
-/* * En Internet en algunos tutoriales sobre Arduino y otras placas puede encontrase el término "bits por segundos" <br>
- *  intercambiado por baudios. En este caso concreto son equivalente dado que en cada estado de la señal se envia<br>
- *  un único bit pero no tiene porque ser así en todos los casos por lo tanto "bits por segundos" y baudios no<br>
- *  siempre son equivalentes.
- */<br>
-</div>
-<div class="card-footer small text-muted">
-    <button type="button" class="btn btn-success btn-block"  onclick="copyToClipboard('#code','#copyButton')" id="copyButton">Presionar para copiar el código en el portapapeles</button>
-</div>
-
-
-</div>
-    <li>Pulse el segundo botón del entorno para compilar y subir el código.</li>
-    <div class="my-3 card">
-        <div class="card-body text-center">
-    <img src="images/upload.png" alt="botón de upload" />
-    </div>
-    <div class="card-footer small text-muted">
-        Botón para subir ("upload") el código a la placa.
-    </div>
-    </div>
-    <li>Tras transferir el código podrá ver cómo parpadea el led cada dos segundos</li>
+      <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
+          <div class="my-3 card">
+              <div class="card-body text-center">
+          <img  src="images/buildQRCode.png" alt="botón del monitor serial" class="img-fluid"/>
+          </div>
+          <div class="card-footer small text-muted">
+              Pestaña para compilar y descargar la aplicación.
+          </div>
+        </li>
+         
+        <li>Abre la aplicación App Inventor desde el móvil y escanea el código QR.
+            <div class="my-3 card">
+                <div class="card-body text-center">
+            <img  src="images/monitor.png" alt="botón del monitor serial"  class="img-fluid"/>
+            </div>
+            <div class="card-footer small text-muted">
+                Botón para acceder al cable serial.
+            </div>
+          </li>
+      
+          <li>Instala la aplicación y pruébala. 
+              <div class="my-3 card">
+                  <div class="card-body text-center">
+              <img  src="images/monitor.png" alt="botón del monitor serial" class="img-fluid"/>
+              </div>
+              <div class="card-footer small text-muted">
+                  Botón para acceder al cable serial.
+              </div>
+            </li>
 </ol>
 
 <h2>Explicación del Código de este Ejemplo</h2>
