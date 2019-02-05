@@ -62,7 +62,7 @@
         </div>
         <div class="col-12 col-md-6">
           <h2>Objetivo:</h2>
-          <p>El objetivo de este tutorial es mostrar como se comportan ciertos elementos de appInventor y aprender el funcionamiento del bloque if else</p>
+          <p>El objetivo de este tutorial es hacer una galería de imágenes que funcionen con un botón de next. Dentro de ese bloque vamos a aprender como se comportan ciertos elementos de appInventor y el funcionamiento del bloque if else</p>
         </div>
 <div class="col-12">
      <h2>Pasos a Seguir</h2>
@@ -93,19 +93,63 @@
       </a>
     </div>
     <li> Descomprime el archivo .zip y añade las imagenes al aparado de recursos media como te mostramos acontinuación</li>
-      <li>Ve al apartado Media, situado abajo a la derecha y presionar el boton Upload File y cargar las imágenes como se muestra a continuación</li>
+      <ul>
+        <li>Ve al apartado Media, situado abajo a la derecha, y presionar el bóton Upload File para cargar las imágenes como se muestra a continuación</li>
+      </ul>  
     <div class="card-body text-center">
         <img  src="images/tutor3_0.png" alt="Pesaña de media" class="img-fluid"/>
     </div>
-  </ol>
-  <div class="my-3 card">
+    <li>Añadimos un elemento botón y un elemento imágen</li>
+    <li>En la parte de propiedades de cada elemento, primero cambiamos las propiedades de la imagen, Height: Fill partent... y Width: Fill partent... En Picture eleguimos las tres imágenes (img1.jpg, img2.jpg, img3.jpg) y nos aseguramos de que el botón de check de ScalePictureToFit esté selccionado. Cambiamos el nombre del botón a Nextboton, con los botónes que encontramos en Components</li>
+    <div class="my-3 card">
       <div class="card-body text-center">
-  <img src="images/ciudad.jpg" alt="botón de upload" />
-  </div>
-  <div class="card-footer small text-muted">
-    <a href="images/ciudad.jpg" download="city.jpg"> 
-      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
-    </a>
+        <img  src="images/tutor3_2.png" alt="Pestaña designer" class="img-fluid"/>
+      </div>
+    </div>
+    <li>Nos vamos a la parte de desarrollo para implementar toda la lógica de la aplicación</li>
+    <ol>
+      <li> Los primero que vamos hacer es crear una variable global, que encontramos en el bloque de Variables. Y lo vamos a unir con una lista donde vamos a integrar las tres imágnes que tenemos en media, como se muestra en la imágen de abajo.</li>
+      <ul>
+        <li> Por defecto algunos elementos de appInventor vienen con ciertas propiedades que podemos cambiar. En el caso de la lista vamos a añadir un Item más para poder tener nuetras tres imagenes. Para ello pinchamos en la rudeda dentada de la izquierda del elemento y arrastrando añadimos el item.</li>
+      </ul>
+    </ol>
+    <div class="my-3 card">
+      <div class="card-body text-center">
+        <img src="images/tutor3_3.png" alt="añadir una propiedad" />
+      </div>
+    </div>
+    <li> Ahora vamos a darle un nombre a la variable global: imageFiles. El primer modulo de programación nos quedaría como acontinuación.</li>
+    <div class="my-3 card">
+      <div class="card-body text-center">
+        <img src="images/tutor3_5.png" alt="Varaible global con lista" />
+      </div>
+    </div>
+    <li> El siguiente paso es iniciar otra varaible global que nos va a ayudar a recorrer la lista. Esta varaible la vamos a llamar "index", y la vamos a iniciar en 1. Deberíamos tener algo parecido a la imagen que mostramos a continuación.</li>
+    <div class="my-3 card">
+      <div class="card-body text-center">
+        <img src="images/tutor3_6.png" alt="Varaible global index" />
+      </div>
+    </div>
+    <li> Por útimo vamos a implementar la lógica del botón. El funcionamiento del botón responde a que cada vez que hacemos click pasa a la siguiente imágen.</li>
+    <ol>
+      <li> Lo primero es elegir uno de los elementos de control del botón y que cuando pulsemos el botón ocurra algo.</li>
+      <li> Después debemos inroduccir dentro del comportamiento del botón la lógica del if.</li>
+      <li> La condición dentro del if la ponemos de la siguiene manera, si la variable global index es menor que la longuitud de la lista de la variable global de imágenes, le sumamos 1 a la variable global index, sino lo que hacemos es que la variable global index sea 1, como al inicio. Como se muestra acontinuación</li>
+    </ol>
+    <div class="my-3 card">
+      <div class="card-body text-center">
+        <img src="images/tutor3_7.png" alt="Condicion del botón" />
+      </div>
+    </div>
+    <li> En el útimo bloque lo que hacemos es decirle donde tiene que ir a buscar y coger las imágenes.</li>
+    <li> A continuación explicamos de donde se coge cada bloque. Estos se corresponden con los colores.</li>
+    <div class="my-3 card">
+      <div class="card-body text-center">
+        <img src="images/tutor3_8.png" alt="Condicion del botón" />
+      </div>
+  </ol>
+  
+  
   </div>
   </div>
   </li>
