@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>IoT Workshop</title>
+    <title>Ideando la Ciudad Digital Workshop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">IoT Workshop</a>
+        <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,166 +44,97 @@
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Tutorial 5:
-        <small>Semáforo Básico</small>
+        <small>Talk to me (con acelerómetro)</small>
       </h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="index.html">Home</a>
         </li>
-        <li class="breadcrumb-item active">Tutorial 5: Semáforo Básico</li>
+        <li class="breadcrumb-item active">Tutorial 5:Talk to me (con acelerómetro)</li>
       </ol>
 
-      <!-- Intro Content -->
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="img-fluid rounded mb-4" src="images/mainTrafficLight.jpg" alt="">
-        </div>
-        <div class="col-12 col-md-6">
-          <h2>Objetivo:</h2>
-          <p>Este proyecto tiene como objetivo verificar el correcto funcionamiento de un circuito sencillo que simula un semáforo. Posteriormente en los dos siguientes proyectos será usado este circuito.</p>
-        </div>
-<div class="col-12">
-     <h2>Pasos a Seguir</h2>
-<ol>
-    <li>Desconecte el cable usb de la placa o del ordenador (con el objetivo de evitar cortocircuitos)</li>
-    <li>Coloque la parte lateral donde aparecen más pines con el prefijo "D" conectada a la placa en la primera columna. Los demás pines quedarán en el aire como en la imagen.</li>
-    <div class="my-3 card">
-        <div class="card-body text-center">
-            <img src="images/baseInicial.png" alt="Base Inicial"/>
-    </div>
-    <div class="card-footer small text-muted">
-        Protoboard conectada con la NodeMCU.
-    </div>
-    </div>
+        <!-- Intro Content -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img class="img-fluid rounded mb-4" src="images/img_inicio_tutor4_0.png" alt="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h2>Objetivo:</h2>
+            <p>El objetivo de este tutorial es hacer una aplicación donde podamos introduccir texto y escucharlo. También haremos que cada vez que agitamos el teléfono se dispara un evento que en este caso es un texto predeterminado</p>
+          </div>
+        <div class="col-12">
+          <h2>Pasos a Seguir</h2>
+          <ol>
+            <li>Abrir el entorno de desarrollo App Inventor.
+              <ol type="a">
+                <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
+                <li>Pulsar el botón create app!</li>
+                <li>Selecciona una cuenta de Google</li>
+              </ol>
+            </li>
+            <li>Pulsa el menú Projects -> Star new project </li>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img  src="images/import.png" alt="Pestaña designer" class="img-fluid"/>
+              </div>
+            </div>
+            <li> Lo primero que vamos hacer es crear un campo de texto y después vamos a añadir un botón</li>
+            <div class="card-body text-center">
+                <img  src="images/tutor4_1.png" alt="Añadir los elementos" class="img-fluid"/>
+            </div>
+            <li> Seguidamente vamos a añadir el elemento TextToSpeech que vamos a encontrar en la pestaña de media. Este elemento se posicionará como un componente no visble</li>
+            <div class="card-body text-center">
+                <img  src="images/tutor4_2.png" alt="Pesaña de media" class="img-fluid"/>
+            </div>
+            <li>Ahora vamos a implementar la lógica de nuetra app. Para ello lo que vamos a cambiar a la parte de Blocks. </li>
+              <li> Primero vamos a diseñar la lógica del botón</li>
+                <ol>
+                  <li> Incluimos la caja del botón que nos permite generar una interacción cuando lo pulsamos</li>
+                  <li> Después tenemos que añadir el llamamiento al texto para que lo hable</li>
+                  <li> Por último tenemos que añadir como input el texto añadido por el usuario, como podemos ver en la imágen siguiente</li>
+                </ol>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img  src="images/tutor4_3.png" alt="Añadimos la logica del boton" class="img-fluid"/>
+              </div>
+            </div>
 
-    
-    <li>Coloque las resistencias, leds y cables según el esquema de circuito que se muestra a continuación:</li>
-    <div class="my-3 card">
-        <div class="card-body text-center">
-            <img src="images/semaforo.png" alt="Semaforo"/>
-    </div>
-    <div class="card-footer small text-muted">
-        Circuito Semáforo Completado.
-    </div>
-    </div>
-
-
-    <li>Conecte la placa al ordenador por el cable usb</li>
-    <li>Abra el entorno y copiar el siguiente código:</li>
-    <div class="my-3 card">
-       
-        <div class="card-header" style="font-weight: bold;">
-            <i class="fas fa-code"></i> Código Semáforo</div>
-        <div class="card-body" id="code" style="font-family: Courier New;font-size: 0.7em;">
-<br>
-void setup() {<br>
-&nbsp;&nbsp;// Pon aquí tu código que será ejecutado solo una vez:<br>
-<br>
-&nbsp;&nbsp;// Inicia la comunicación entre la placa y el ordenador<br>
-&nbsp;&nbsp;Serial.begin(9600);<br>
-&nbsp;&nbsp;// Indica que el pin D1 será de salida (Led rojo)<br>
-&nbsp;&nbsp;pinMode(D1,OUTPUT);<br>
-&nbsp;&nbsp;// Indica que el pin D5 será de salida (Led ambar)<br>
-&nbsp;&nbsp;pinMode(D5,OUTPUT);<br>
-&nbsp;&nbsp;// Indica que el pin D8 será de salida (Led verde)<br>
-&nbsp;&nbsp;pinMode(D8,OUTPUT);<br>
-}<br>
-<br>
-void loop() {<br>
-&nbsp;&nbsp;// Pon aquí tu código principal, para que repita constantemente:<br>
-<br>
-&nbsp;&nbsp;// Envia un mensaje al ordenador indicando qué va a hacer<br>
-&nbsp;&nbsp;Serial.println("Se enciende la luz verde");<br>
-&nbsp;&nbsp;// Indica que se envie la señal de voltaje alta de 3.3 voltios en el pin D8<br>
-&nbsp;&nbsp;digitalWrite(D8,HIGH);<br>
-&nbsp;&nbsp;// Indica que se espere 3000 milisegundos = 3 segundos<br>
-&nbsp;&nbsp;delay(3000);<br>
-&nbsp;&nbsp;// Indica que se envie la señal de voltaje baja de 0 voltios en el pin D8<br>
-&nbsp;&nbsp;digitalWrite(D8,LOW);<br>
-<br>
-&nbsp;&nbsp;// Envia un mensaje al ordenador indicando qué va a hacer<br>
-&nbsp;&nbsp;Serial.println("Se enciende la luz ambar");<br>
-&nbsp;&nbsp;// Indica que se envie la señal de voltaje alta de 3.3 voltios en el pin D5<br>
-&nbsp;&nbsp;digitalWrite(D5,HIGH);<br>
-&nbsp;&nbsp;// Indica que se espere 1000 milisegundos = 1 segundo<br>
-&nbsp;&nbsp;delay(1000);<br>
-&nbsp;&nbsp;// Indica que se envie la señal de voltaje baja de 0 voltios en el pin D8<br>
-&nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-<br>
-&nbsp;&nbsp;// Envia un mensaje al ordenador indicando qué va a hacer<br>
-&nbsp;&nbsp;Serial.println("Se enciende la luz rojo");<br>
-&nbsp;&nbsp;// Indica que se envie la señal de voltaje alta de 3.3 voltios en el pin D1<br>
-&nbsp;&nbsp;digitalWrite(D1,HIGH);<br>
-&nbsp;&nbsp;// Indica que se espere 3000 milisegundos = 3 segundos<br>
-&nbsp;&nbsp;delay(3000);<br>
-&nbsp;&nbsp;// Indica que se envie la señal de voltaje baja de 0 voltios en el pin D8<br>
-&nbsp;&nbsp;digitalWrite(D1,LOW);<br>
-}<br>
-<br>
-</div>
-<div class="card-footer small text-muted">
-    <button type="button" class="btn btn-success btn-block"  onclick="copyToClipboard('#code','#copyButton')" id="copyButton">Presionar para copiar el código en el portapapeles</button>
-</div>
+            <li> Seguidamente vamos a programar la acción del acelerómetro, para ello hay que añadirlo como elemento primero</li>
+            <div class="card-body text-center">
+                <img src="images/tutor4_4.png" alt="Añadir el acelerometro" class="img-fluid"/>
+            </div>
+            <li> Vamos a generar la lógica del acelerómetro.</li>
+            <ol>
+                <li> Añadimos el bloque del aclelerómetro que actuará cuando agitamos el móvil</li>
+                <li> Después tenemos que añadir el llamamiento al texto que va a sonar cuando movamos el móvil</li>
+                <li> Por último tenemos que añadir el texto que queremos que suene</li>
+              </ol>
+              <div class="card-body text-center">
+                <img src="images/tutor4_5.png" alt="Programacion del acelerometro" class="img-fluid"/>
+            </div>
 
 
-</div>
-    <li>Pulse el segundo botón del entorno para compilar y subir el código.</li>
-    <div class="my-3 card">
-        <div class="card-body text-center">
-    <img src="images/upload.png" alt="botón de upload" />
-    </div>
-    <div class="card-footer small text-muted">
-        Botón para subir ("upload") el código a la placa.
-    </div>
-    </div>
+    <!-- Team Members -->
+      
 
 
-<li>Tras transferir el código podrá ver que los leds se comportan como si fueran las luces de un semáforo. Si pulsas sobre el botón de la consola de monitorización (botón superior derecha en el que aparece una lupa) podrás ver que por consola indica qué led se va a encender.</li>
-<div class="my-3 card">
-    <div class="card-body text-center">
-<img  src="images/monitor.png" alt="botón del monitor serial" />
-</div>
-<div class="card-footer small text-muted">
-    Botón para acceder al cable serial.
-</div>
-</div>
-</ol>
 
-<h2>Explicación del Código de este Ejemplo</h2>
-
-<p>La función Setup se encarga de indicar la velocidad a la que se comunciará la placa con el ordenador e configurar los pines D1, D5 y D8 como pines de salida de señal o voltaje.</p>
-
-<p>La función Loop está dividida en tres fases:</p>
-<ul>
-    <li>Fase 1 Luz Verde: Indica que se va a encender el led verde, se enciende el led verde, se espera 3 segundos y se apaga el led.</li>
-    <li>Fase 2 Luz Ambar: Indica que se va a encender el led ambar, se enciende el led ambar, se espera 1 segundo y se apaga el led.</li>
-    <li>Fase 3 Luz Roja: Indica que se va a encender el led rojo, se enciende el led rojo, se espera 3 segundos y se apaga el led.</li>
-</ul>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <!-- Team Members -->
-     
-
-   
-
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Taller de Internet of Things. Mónica Sánchez de Francisco y Álvaro Montero Montes. Universidad Carlos III de Madrid.</p>
       </div>
       <!-- /.container -->
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro Montero Montes. Universidad Carlos III de Madrid.</p>
+        </div>
+        <!-- /.container -->
+      </footer>
 
-</html>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="js/script.js"></script>
+      </body>
+
+      </html>
