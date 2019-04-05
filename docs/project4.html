@@ -74,12 +74,19 @@
       <li>Selecciona una cuenta de Google</li>
     </ol>
   </li>
-  <li>Pulsa el menú Projects -> Star new project </li>
+
+ 
+
+  <li>Pulsa el menú Projects -> Star new project 
     <div class="my-3 card">
       <div class="card-body text-center">
         <img  src="images/import.png" alt="Pestaña designer" class="img-fluid"/>
       </div>
-  </div>
+      <div class="card-footer small text-muted">
+        Creando nuevo proyecto
+      </div>
+    </div>
+  </li>
   <li> Añadir las tres imágenes del galería de imágenes que vamos a crear...(Descargar el proyecto que se proporciona en el botón)</li>
     <li> Lo primero que hacemos es decargar el siguiente archivo. </li>
     <div class="card-footer small text-muted">
@@ -87,20 +94,31 @@
         <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar archivo (.zip) </button>
       </a>
     </div>
-    <li> Descomprime el archivo .zip y añade las imagenes al aparado de recursos media como te mostramos acontinuación</li>
+    <li> Descomprime el archivo .zip y añade las imagenes al aparado de recursos media como te mostramos acontinuación
       <ul>
         <li>Ve al apartado Media, situado abajo a la derecha, y presionar el bóton Upload File para cargar las imágenes como se muestra a continuación</li>
       </ul>  
-    <div class="card-body text-center">
-        <img  src="images/tutor3_0.png" alt="Pesaña de media" class="img-fluid"/>
-    </div>
+      <div class="my-3 card">
+        <div class="card-body text-center">
+          <img  src="images/tutor3_0.png" alt="Pestaña designer" class="img-fluid"/>
+        </div>
+        <div class="card-footer small text-muted">
+          Creando nuevo proyecto
+        </div>
+      </div>
+    </li>
+      
     <li>Añadimos un elemento botón y un elemento imágen</li>
-    <li>En la parte de propiedades de cada elemento, primero cambiamos las propiedades de la imagen, Height: Fill partent... y Width: Fill partent... En Picture eleguimos las tres imágenes (img1.jpg, img2.jpg, img3.jpg) y nos aseguramos de que el botón de check de ScalePictureToFit esté selccionado. Cambiamos el nombre del botón a Nextboton, con los botónes que encontramos en Components</li>
+    <li>En la parte de propiedades de cada elemento, primero cambiamos las propiedades de la imagen, Height: Fill partent... y Width: Fill partent... En Picture eleguimos las tres imágenes (img1.jpg, img2.jpg, img3.jpg) y nos aseguramos de que el botón de check de ScalePictureToFit esté selccionado. Cambiamos el nombre del botón a Nextboton, con los botónes que encontramos en Components
     <div class="my-3 card">
       <div class="card-body text-center">
         <img  src="images/tutor3_2.png" alt="Pestaña designer" class="img-fluid"/>
       </div>
+      <div class="card-footer small text-muted">
+        Creando nuevo proyecto
+      </div>
     </div>
+    </li>
     <li>Nos vamos a la parte de desarrollo para implementar toda la lógica de la aplicación</li>
     <ol>
       <li> Los primero que vamos hacer es crear una variable global, que encontramos en el bloque de Variables. Y lo vamos a unir con una lista donde vamos a integrar las tres imágnes que tenemos en media, como se muestra en la imágen de abajo.</li>
@@ -111,17 +129,27 @@
     <div class="card-body text-center">
         <img src="images/tutor3_3.png" alt="añadir una propiedad" class="img-fluid"/>
     </div>
-    <li> Ahora vamos a darle un nombre a la variable global: imageFiles. El primer modulo de programación nos quedaría como acontinuación.</li>
-      <div class="card-body text-center">
-        <img src="images/tutor3_5.png" alt="Varaible global con lista" class="img-fluid"/>
-    </div>
-    <li> El siguiente paso es iniciar otra varaible global que nos va a ayudar a recorrer la lista. Esta varaible la vamos a llamar "index", y la vamos a iniciar en 1, para hacer referencia al primer elemento de la lista (img1.jpg). Deberíamos tener algo parecido a la imagen que mostramos a continuación.</li>
+    <li> Ahora vamos a darle un nombre a la variable global: imageFiles. El primer modulo de programación nos quedaría como acontinuación.
+      <div class="my-3 card">
+        <div class="card-body text-center">
+          <img  src="images/tutor3_5.png" alt="Varaible global con lista" class="img-fluid"/>
+        </div>
+        <div class="card-footer small text-muted">
+          Creación e inicialización de la variable imageFiles con la lista de imagenes
+        </div>
+      </div>
+    </li>
+    <li> El siguiente paso es iniciar otra varaible global que nos va a ayudar a recorrer la lista. Esta varaible la vamos a llamar "index", y la vamos a iniciar en 1, para hacer referencia al primer elemento de la lista (img1.jpg). Deberíamos tener algo parecido a la imagen que mostramos a continuación.
     <div class="my-3 card">
       <div class="card-body text-center">
-        <img src="images/tutor3_6.png" alt="Varaible global index" class="img-fluid" />
+        <img  src="images/tutor3_6.png" alt="Varaible global index" class="img-fluid"/>
+      </div>
+      <div class="card-footer small text-muted">
+        Inicialización de la variable index a 1.
       </div>
     </div>
-    <li> Por útimo vamos a implementar la lógica del botón. El funcionamiento del botón responde a que cada vez que hacemos click pasa a la siguiente imágen.</li>
+  </li>
+    <li> Por útimo vamos a implementar la lógica del botón. El funcionamiento del botón responde a que cada vez que hacemos click pasa a la siguiente imágen.
     <ol>
       <li> Lo primero es elegir uno de los elementos de control del botón y que cuando pulsemos el botón ocurra algo.</li>
       <li> Después debemos inroduccir dentro del comportamiento del botón la lógica del if.</li>
@@ -129,15 +157,25 @@
     </ol>
     <div class="my-3 card">
       <div class="card-body text-center">
-        <img src="images/tutor3_7.png" alt="Condicion del botón" class="img-fluid"/>
+        <img  src="images/tutor3_7.png" alt="Pestaña designer" class="img-fluid"/>
+      </div>
+      <div class="card-footer small text-muted">
+        Lógica de la aplicación para cambiar de imagen tras pulsar un botón
       </div>
     </div>
+    </li>
     <li> En el útimo bloque lo que hacemos es decirle donde tiene que ir a buscar y coger las imágenes.</li>
-    <li> A continuación explicamos de donde se coge cada bloque. Estos se corresponden con los colores.</li>
-    <div class="my-3 card">
-      <div class="card-body text-center">
-        <img src="images/tutor3_8.png" alt="Condicion del botón" class="img-fluid"/>
+    <li> A continuación explicamos de donde se coge cada bloque. Estos se corresponden con los colores.
+      <div class="my-3 card">
+        <div class="card-body text-center">
+          <img  src="images/tutor3_8.png" alt="Pestaña designer" class="img-fluid"/>
+        </div>
+        <div class="card-footer small text-muted">
+          Lógica de la aplicación para cambiar de imagen tras pulsar un botón
+        </div>
       </div>
+
+    </li>
   </ol>
   
   
