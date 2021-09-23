@@ -1,122 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Ideando la Ciudad Digital Workshop</title>
+  <title>Ideando la Ciudad Digital Workshop</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
 
-    <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Tutorial 5:
-        <small>Talk to me (con acelerómetro)</small>
-      </h1>
+  <!-- Page Content -->
+  <div class="container">
 
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Tutorial 5:Talk to me (con acelerómetro)</li>
-      </ol>
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Tutorial 5:
+      <small>Talk to me (con acelerómetro)</small>
+    </h1>
 
-        <!-- Intro Content -->
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <img class="img-fluid rounded mb-4" src="images/img_inicio_tutor4_0.png" alt="">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Tutorial 5:Talk to me (con acelerómetro)</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img class="img-fluid rounded mb-4" src="images/img_inicio_tutor4_0.png" alt="">
+      </div>
+      <div class="col-12 col-md-6">
+        <h2>Objetivo:</h2>
+        <p>El objetivo de este tutorial es hacer una aplicación donde podamos introduccir texto y escucharlo. También
+          haremos que cada vez que agitamos el teléfono se dispara un evento que en este caso es un texto predeterminado
+        </p>
+      </div>
+      <div class="col-12">
+        <h2>Pasos a Seguir</h2>
+        <ol>
+          <li>Abrir el entorno de desarrollo App Inventor.
+            <ol type="a">
+              <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
+              <li>Pulsar el botón create app!</li>
+              <li>Selecciona una cuenta de Google</li>
+            </ol>
+          </li>
+          <li>Pulsa el menú Projects -> Star new project </li>
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
+            </div>
           </div>
-          <div class="col-12 col-md-6">
-            <h2>Objetivo:</h2>
-            <p>El objetivo de este tutorial es hacer una aplicación donde podamos introduccir texto y escucharlo. También haremos que cada vez que agitamos el teléfono se dispara un evento que en este caso es un texto predeterminado</p>
+          <li> Lo primero que vamos hacer es crear un campo de texto y después vamos a añadir un botón</li>
+          <div class="card-body text-center">
+            <img src="images/tutor4_1.png" alt="Añadir los elementos" class="img-fluid" />
           </div>
-        <div class="col-12">
-          <h2>Pasos a Seguir</h2>
+          <li> Seguidamente vamos a añadir el elemento TextToSpeech que vamos a encontrar en la pestaña de media. Este
+            elemento se posicionará como un componente no visble</li>
+          <div class="card-body text-center">
+            <img src="images/tutor4_2.png" alt="Pesaña de media" class="img-fluid" />
+          </div>
+          <li>Ahora vamos a implementar la lógica de nuetra app. Para ello lo que vamos a cambiar a la parte de Blocks.
+          </li>
+          <li> Primero vamos a diseñar la lógica del botón</li>
           <ol>
-            <li>Abrir el entorno de desarrollo App Inventor.
-              <ol type="a">
-                <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
-                <li>Pulsar el botón create app!</li>
-                <li>Selecciona una cuenta de Google</li>
-              </ol>
-            </li>
-            <li>Pulsa el menú Projects -> Star new project </li>
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img  src="images/import.png" alt="Pestaña designer" class="img-fluid"/>
-              </div>
-            </div>
-            <li> Lo primero que vamos hacer es crear un campo de texto y después vamos a añadir un botón</li>
+            <li> Incluimos la caja del botón que nos permite generar una interacción cuando lo pulsamos</li>
+            <li> Después tenemos que añadir el llamamiento al texto para que lo hable</li>
+            <li> Por último tenemos que añadir como input el texto añadido por el usuario, como podemos ver en la imágen
+              siguiente</li>
+          </ol>
+          <div class="my-3 card">
             <div class="card-body text-center">
-                <img  src="images/tutor4_1.png" alt="Añadir los elementos" class="img-fluid"/>
+              <img src="images/tutor4_3.png" alt="Añadimos la logica del boton" class="img-fluid" />
             </div>
-            <li> Seguidamente vamos a añadir el elemento TextToSpeech que vamos a encontrar en la pestaña de media. Este elemento se posicionará como un componente no visble</li>
-            <div class="card-body text-center">
-                <img  src="images/tutor4_2.png" alt="Pesaña de media" class="img-fluid"/>
-            </div>
-            <li>Ahora vamos a implementar la lógica de nuetra app. Para ello lo que vamos a cambiar a la parte de Blocks. </li>
-              <li> Primero vamos a diseñar la lógica del botón</li>
-                <ol>
-                  <li> Incluimos la caja del botón que nos permite generar una interacción cuando lo pulsamos</li>
-                  <li> Después tenemos que añadir el llamamiento al texto para que lo hable</li>
-                  <li> Por último tenemos que añadir como input el texto añadido por el usuario, como podemos ver en la imágen siguiente</li>
-                </ol>
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img  src="images/tutor4_3.png" alt="Añadimos la logica del boton" class="img-fluid"/>
-              </div>
-            </div>
+          </div>
 
-            <li> Seguidamente vamos a programar la acción del acelerómetro, para ello hay que añadirlo como elemento primero</li>
-            <div class="card-body text-center">
-                <img src="images/tutor4_4.png" alt="Añadir el acelerometro" class="img-fluid"/>
-            </div>
-            <li> Vamos a generar la lógica del acelerómetro.</li>
-            <ol>
-                <li> Añadimos el bloque del aclelerómetro que actuará cuando agitamos el móvil</li>
-                <li> Después tenemos que añadir el llamamiento al texto que va a sonar cuando movamos el móvil</li>
-                <li> Por último tenemos que añadir el texto que queremos que suene</li>
-              </ol>
-              <div class="card-body text-center">
-                <img src="images/tutor4_5.png" alt="Programacion del acelerometro" class="img-fluid"/>
-            </div>
+          <li> Seguidamente vamos a programar la acción del acelerómetro, para ello hay que añadirlo como elemento
+            primero</li>
+          <div class="card-body text-center">
+            <img src="images/tutor4_4.png" alt="Añadir el acelerometro" class="img-fluid" />
+          </div>
+          <li> Vamos a generar la lógica del acelerómetro.</li>
+          <ol>
+            <li> Añadimos el bloque del aclelerómetro que actuará cuando agitamos el móvil</li>
+            <li> Después tenemos que añadir el llamamiento al texto que va a sonar cuando movamos el móvil</li>
+            <li> Por último tenemos que añadir el texto que queremos que suene</li>
+          </ol>
+          <div class="card-body text-center">
+            <img src="images/tutor4_5.png" alt="Programacion del acelerometro" class="img-fluid" />
+          </div>
 
 
-    <!-- Team Members -->
-      
+          <!-- Team Members -->
+
 
 
 
@@ -126,7 +134,8 @@
       <!-- Footer -->
       <footer class="py-5 bg-dark">
         <div class="container">
-          <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro Montero Montes. Universidad Carlos III de Madrid.</p>
+          <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+            Montero Montes. Universidad Carlos III de Madrid.</p>
         </div>
         <!-- /.container -->
       </footer>
@@ -135,6 +144,6 @@
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="js/script.js"></script>
-      </body>
+</body>
 
-      </html>
+</html>

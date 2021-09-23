@@ -1,229 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Ideando la Ciudad Digital Workshop</title>
+  <title>Ideando la Ciudad Digital - Workshop</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
 
-    <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
 
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Tutorial 2:
-        <small>¡Hola Mundo! / Hello World!</small>
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Tutorial 2: ¡Hola Mundo! / Hello World!</li>
-      </ol>
-
-      <!-- Intro Content -->
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="img-fluid rounded mb-4" src="images/appinventor_portada.png" alt="">
-        </div>
-        <div class="col-12 col-md-6">
-          <h2>Objetivo:</h2>
-          <p>El objetivo principal de este proyecto es mostrar los conceptos más básicos de la herramienta App Inventor al mismo tiempo que se desarrolla un proyecto.</p>
-        </div>
-<div class="col-12">
-           <h2>Conceptos Básicos:</h2>
-
-<ul>
-    <li>Interfaz de Usuario: Es el medio por el que los usuarios se pueden comunicar con las máquinas, computadoras o dispositivos y viceversa. Ejemplo: Pantalla de móvil, teclado de ordenador, altavoz, micrófono…</li>
-    <li>Convertir el código fuente (texto “entendible” por el ser humano) u otra representación de lógica/acciones en un código comprensible por un ordenador.</li>
-</ul>
-
-<h2>Pasos a Seguir</h2>
-<ol>
-    <li>Abrir el entorno de desarrollo App Inventor.
-      <ol type="a">
-        <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
-        <li>Pulsar el botón create app!</li>
-        <li>Selecciona una cuenta de Google</li>
-      </ol>
-    </li>
-    <li>Pulsa el botón “Start new proyect”</li>
-    Una vez creado el proyecto podremos acceder a la interfaz de App Inventor que está compuesta por dos pestañas principales: Designer y Blocks.
-Designer permite diseñar la interfaz de la aplicación que se desarrolla arrastrando los componentes desde el margen izquierdo al Viewer. Las propiedades de los componentes pueden ser modificados en el margen derecho. 
-Blocks permite definir la lógica de la aplicación mediante bloques. Para ello, basta con mover los componentes del margen derecho que intervienen en la lógica al lienzo y describir la lógica.
-<div class="my-3 card">
-    <div class="card-body text-center">
-      <img  src="images/designer.png" alt="Pestaña designer" class="img-fluid"/>
-    </div>
-    <div class="card-footer small text-muted">
-      Pestaña de Diseño de Interfaz de Usuario
-  </div>
-</div>
-<div class="my-3 card">
-    <div class="card-body text-center">
-<img  src="images/blocks.png" alt="Pestaña Blocks" class="img-fluid" />
-</div>
-<div class="card-footer small text-muted">
-    Pestaña de Implementación de la Lógica
-</div>
-</div>
-    <li>Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las siguientes propiedades del componente:
-      <ol type="a">
-        <li>FontBold: “marcado” (hará que el texto esté en negrita)</li>
-        <li>FontSize: 28 (hará que el texto sea más grande)</li>
-        <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
-        <li>TextAligment: “Center: 1” (hará que el texto esté centrado)</li>
-        <li>Text: “Welcome UC3M!” (cambiará el texto que se muestra)</li>
-      </ol>
-    </li>
-
-    <li>Arrastra el componente HorizontalArrangement del margen derecho (Palette-> Layout) debajo de la etiqueta anterior. Este componente permite colocar los elementos horizontalmente. Cambia las siguientes propiedades del componente:
-      <ol type="a">
-        <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente)</li>
-        <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
-      </ol>
-    </li>
-
-    <li>Arrastra el componente Label y TextBox (Palette->User Interface) dentro del componente anterior. Cambia las siguientes propiedades de los componentes:
-      <ol type="a">
-        <li>Label.Text: “Name:” (cambiará el texto que se muestra)</li>
-        <li>Textbox.Hint: “Ciudad” (cambiará el texto de placeholder)</li>
-      </ol>
-    </li>
-    
-    <li>Arrastra el componente Image (Palette-> User Interface) debajo del contenedor horizontal. Cambia las siguientes propiedades del componente:
-        <ol type="a">
-          <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
-          <li>Picture->Upload File->Examinar… y selecciona la siguiente imagen tras descargarla: (cambiará la imagen a mostrar)</li>
-        </ol>
-        <div class="my-3 card">
-            <div class="card-body text-center">
-        <img src="images/ciudad.jpg" alt="botón de upload" />
-        </div>
-        <div class="card-footer small text-muted">
-          <a href="images/ciudad.jpg" download="city.jpg"> 
-            <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
-          </a>
-        </div>
-        </div>
-    </li>
-
-    <li>Arrastra el componente Button (Palette-> User Interface) debajo de la imagen anterior.
-        <ol type="a">
-          <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
-          <li>Text: “Greetings:” (cambiará el texto del botón)</li>
-        </ol>
-    </li>
-
-    <li>Arrastra el componente Notifier (Palette-> User Interface) en el visor. Este componente aparece incluido en componente no visuales.</li>
-
-    <li>Cambia a la pestaña Blocks (Arriba a la derecha)
-    <div class="my-3 card">
-        <div class="card-body text-center">
-    <img  src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
-    </div>
-    <div class="card-footer small text-muted">
-        Pestaña para cambiar a modo desarrollador de lógica.
-    </div>
-    </li>
-    <li>Selecciona el componente botón de la derecha y arrastra el lienzo el siguiente bloque:
-    <div class="my-3 card">
-        <div class="card-body text-center">
-    <img  src="images/botonClick.png" alt="botón del monitor serial" class="img-fluid" />
-    </div>
-    <div class="card-footer small text-muted">
-        Arrastrar la lógica de hacer click sobre el botón.
-    </div>
-  </li>
-  <li>Construye el siguiente bloque arrastrando los bloques. El bloque de marrón indique que cuando se haga “Click” sobre el botón se hará lo que hay dentro. El bloque morado hace que se muestre una alerta con el texto que se conecta. Los dos bloques magentas uno une dos textos y otro es el valor de texto “hello, “. El bloque azulverdoso toma el valor que hay dentro del TextBox.
-      <div class="my-3 card">
-          <div class="card-body text-center">
-      <img  src="images/firstProjectBlocks.png" alt="botón del monitor serial" class="img-fluid"/>
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital -Workshop</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
       </div>
-      <div class="card-footer small text-muted">
-          Lógica de la aplicación para mostrar un mensaje.
-      </div>
-    </li>
-  <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
-    <div class="my-3 card">
-        <div class="card-body text-center">
-    <img  src="images/buildQRCode.png" alt="botón del monitor serial" class="img-fluid"/>
     </div>
-    <div class="card-footer small text-muted">
-        Pestaña para compilar y descargar la aplicación.
-    </div>
-  </li>
-   
-  <li>Abre la aplicación App Inventor desde el móvil y escanea el código QR.
-      <div class="my-3 card">
-          <div class="card-body text-center">
-      <img  src="images/arrancarAppInventor.jpg" alt="botón del monitor serial"  class="img-fluid"/>
-      </div>
-      <div class="card-footer small text-muted">
-          Arrancar App Inventor.
-      </div>
-      <div class="my-3 card">
-          <div class="card-body text-center">
-      <img  src="images/leerCodigoAppInventor.jpg" alt="botón del monitor serial"  class="img-fluid"/>
-      </div>
-      <div class="card-footer small text-muted">
-          Pulsar Escanear Código QR.
-      </div>
-    </li>
+  </nav>
 
-    <li>Instala la aplicación y pruébala. 
-        <div class="my-3 card">
-            <div class="card-body text-center">
-        <img  src="images/instalarAplicacion.jpg" alt="botón del monitor serial" class="img-fluid"/>
-        </div>
-        <div class="card-footer small text-muted">
-            Aceptar Instalar aplicación
-        </div>
-        <div class="my-3 card">
-            <div class="card-body text-center">
-        <img  src="images/darPermisosAplicacion.jpg" alt="botón del monitor serial" class="img-fluid"/>
-        </div>
-        <div class="card-footer small text-muted">
-            Aceptar Instalar aplicación sin firma reconocida
-        </div>
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Tutorial 2:
+      <small>¡Hola Mundo! / Hello World!</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
       </li>
-</ol>
+      <li class="breadcrumb-item active">Tutorial 2: ¡Hola Mundo! / Hello World!</li>
+    </ol>
 
-<!--<h2>Explicación General del Código</h2>
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img class="img-fluid rounded mb-4" src="images/appinventor_portada.png" alt="">
+      </div>
+      <div class="col-12 col-md-6">
+        <h2>Objetivo:</h2>
+        <p>El objetivo principal de este proyecto es mostrar los conceptos más básicos de la herramienta App Inventor al
+          mismo tiempo que se desarrolla un proyecto.</p>
+      </div>
+      <div class="col-12">
+        <h2>Conceptos Básicos:</h2>
+        <ul>
+          <li>Interfaz de Usuario: Es el medio por el que los usuarios se pueden comunicar con las máquinas,
+            computadoras o dispositivos y viceversa. Ejemplo: Pantalla de móvil, teclado de ordenador, altavoz,
+            micrófono…
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/user-interfaces.svg" alt="Pestaña Blocks" class="img-fluid" style="width: 640px;" />
+              </div>
+              <div class="card-footer small text-muted">
+                Ilustración de diferentes tipos de interfaces de usuario durante un videojuego.
+              </div>
+            </div>
+          </li>
+
+          <li>Compilar (Construir/"Build"): Convertir el código fuente (texto “entendible” por el ser humano) u otra
+            representación de lógica/acciones en un código comprensible por un ordenador.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/compilar.svg" alt="Pestaña Blocks" class="img-fluid " />
+              </div>
+              <div class="card-footer small text-muted">
+                Ejemplo de código fuente en C y su resultado tras la compilación.
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h2>Pasos a Seguir</h2>
+        <ol>
+          <li>Abrir el entorno de desarrollo App Inventor.
+            <ol type="a">
+              <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
+              <li>Pulsa el botón create app!</li>
+              <li>Selecciona una cuenta de Google</li>
+              <li>Acepta los términos y condiciones (solo la primera vez que se accede a la plataforma)</li>
+            </ol>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="animations/open.gif" alt="Animacion" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Abriendo la plataforma App Inventor desde el navegador
+              </div>
+            </div>
+          </li>
+          <li>Pulsa el botón “Start new proyect” y pon de nombre al proyecto "Tutorial Bienvenida"</li>
+          Una vez creado el proyecto podremos acceder a la interfaz de App Inventor que está compuesta por dos pestañas
+          principales: Designer y Blocks.
+          Designer permite diseñar la interfaz de la aplicación que se desarrolla arrastrando los componentes desde el
+          margen izquierdo al Viewer. Las propiedades de los componentes pueden ser modificados en el margen derecho.
+          Blocks permite definir la lógica de la aplicación mediante bloques. Para ello, basta con mover los componentes
+          del margen derecho que intervienen en la lógica al lienzo y describir la lógica.
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="images/designer.png" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Pestaña de Diseño de Interfaz de Usuario
+            </div>
+          </div>
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="images/blocks.png" alt="Pestaña Blocks" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Pestaña de Implementación de la Lógica
+            </div>
+          </div>
+          <li>Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las siguientes
+            propiedades del componente:
+            <ol type="a">
+              <li>FontBold: “marcado” (hará que el texto esté en negrita)</li>
+              <li>FontSize: 28 (hará que el texto sea más grande)</li>
+              <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+              <li>Text: “Welcome UC3M!” (cambiará el texto que se muestra)</li>
+              <li>TextAligment: “Center: 1” (hará que el texto esté centrado)</li>
+            </ol>
+          </li>
+
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="animations/step2.3.gif" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Animación de cómo se coloca la etiqueta "label" y cómo se configura sus propiedades.
+            </div>
+          </div>
+
+          <li>Arrastra el componente HorizontalArrangement del margen derecho (Palette-> Layout) debajo de la etiqueta
+            anterior. Este componente permite colocar los elementos horizontalmente. Cambia las siguientes propiedades
+            del componente:
+            <ol type="a">
+              <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente en el centro)</li>
+              <li>Align Horizontal: “Center: 3” (hará que el contenido esté alineado horizontalmente en centro)</li>
+              <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+            </ol>
+          </li>
+
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="animations/step2.4.gif" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Animación de cómo se coloca el contenedor horizontal y cómo se configura sus propiedades.
+            </div>
+          </div>
+
+          <li>Arrastra el componente Label y TextBox (Palette->User Interface) dentro del componente anterior. Cambia
+            las siguientes propiedades de los componentes:
+            <ol type="a">
+              <li>Label.Text: “Name:” (cambiará el texto que se muestra)</li>
+              <li>Textbox.Hint: “Ciudad” (cambiará el texto de placeholder)</li>
+            </ol>
+          </li>
+
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="animations/step2.5.gif" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Animación de cómo se coloca los dos componentes y cómo se configuran sus propiedades
+            </div>
+          </div>
+
+          <li>Arrastra el componente Image (Palette-> User Interface) debajo del contenedor horizontal. Cambia las
+            siguientes propiedades del componente:
+            <ol type="a">
+              <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+              <li>Picture->Upload File->Examinar… y selecciona la siguiente imagen tras descargarla: (cambiará la imagen
+                a mostrar)</li>
+            </ol>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/ciudad.jpg" alt="botón de upload" />
+              </div>
+              <div class="card-footer small text-muted">
+                <a href="images/ciudad.jpg" download="city.jpg">
+                  <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="animations/step2.6.gif" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Animación de cómo se coloca el componente imagen y cómo se configura.
+            </div>
+          </div>
+
+          <li>Arrastra el componente Button (Palette-> User Interface) debajo de la imagen anterior.
+            <ol type="a">
+              <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+              <li>Text: “Greetings:” (cambiará el texto del botón)</li>
+            </ol>
+          </li>
+
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="animations/step2.7.gif" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Animación de cómo se coloca un botón y cómo se configura.
+            </div>
+          </div>
+
+          <li>Arrastra el componente Notifier (Palette-> User Interface) en el visor. Este componente aparece incluido
+            en componente no visuales.</li>
+
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="animations/step2.8.gif" alt="Pestaña designer" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Animación de cómo se coloca el componente no visual para las notificaciones.
+              </div>
+            </div>
+
+          <li>Cambia a la pestaña Blocks (Arriba a la derecha)
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Pestaña para cambiar a modo desarrollador de lógica.
+              </div>
+          </li>
+          <li>Selecciona el componente botón de la derecha y arrastra el lienzo el siguiente bloque:
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/botonClick.png" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Arrastrar la lógica de hacer click sobre el botón.
+              </div>
+          </li>
+          <li>Construye el siguiente bloque arrastrando los bloques. El bloque de marrón indique que cuando se haga
+            “Click” sobre el botón se hará lo que hay dentro. El bloque morado hace que se muestre una alerta con el
+            texto que se conecta. Los dos bloques magentas uno une dos textos y otro es el valor de texto “hello, “. El
+            bloque azulverdoso toma el valor que hay dentro del TextBox.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/firstProjectBlocks.png" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Lógica de la aplicación para mostrar un mensaje.
+              </div>
+          </li>
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="animations/step2.11.gif" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              Animación para implementar la lógica de la aplicación.
+            </div>
+          </div>
+
+          <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/buildQRCode.png" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Pestaña para compilar y descargar la aplicación.
+              </div>
+          </li>
+
+          <li>Abre la aplicación App Inventor desde el móvil y escanea el código QR.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/arrancarAppInventor.jpg" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Arrancar App Inventor.
+              </div>
+              <div class="my-3 card">
+                <div class="card-body text-center">
+                  <img src="images/leerCodigoAppInventor.jpg" alt="botón del monitor serial" class="img-fluid" />
+                </div>
+                <div class="card-footer small text-muted">
+                  Pulsar Escanear Código QR.
+                </div>
+          </li>
+
+          <li>Instala la aplicación y pruébala.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/instalarAplicacion.jpg" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Aceptar Instalar aplicación
+              </div>
+              <div class="my-3 card">
+                <div class="card-body text-center">
+                  <img src="images/darPermisosAplicacion.jpg" alt="botón del monitor serial" class="img-fluid" />
+                </div>
+                <div class="card-footer small text-muted">
+                  Aceptar Instalar aplicación sin firma reconocida
+                </div>
+          </li>
+        </ol>
+
+        <!--<h2>Explicación General del Código</h2>
 
 <p>La lógica de todos sketches o programas se divide en dos grandes partes (como todos los sketches para Arduino).</p>
 <ul>
@@ -236,24 +346,25 @@ Blocks permite definir la lógica de la aplicación mediante bloques. Para ello,
 
 <p>En la función Loop aparecen dos líneas. La primera escribe por el cable serial (el cable usb) el mensaje que aparece. La segunda línea indica a la placa que debe de esperar 3000 milisegundos que es igual a 3 segundos. Tras terminar de ejecutar esta línea de código se vuelve e ejecutar de nuevo la primera línea por eso aparece cada tres segundos un mensaje por consola.</p>
 -->
-        </div>
       </div>
-      <!-- /.row -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
     </div>
     <!-- /.container -->
+  </footer>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro Montero Montes. Universidad Carlos III de Madrid.</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
 </html>

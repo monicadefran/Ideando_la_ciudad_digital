@@ -1,198 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Ideando la Ciudad Digital Workshop</title>
+  <title>Ideando la Ciudad Digital Workshop</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
 
-    <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
 
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-
-      <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Tutorial 3:
-        <small>Cash Register</small>
-      </h1>
-
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Tutorial 3: Cash Register</li>
-      </ol>
-
-      <!-- Intro Content -->
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img class="img-fluid rounded mb-4" src="images/project3.png" alt="">
-        </div>
-        <div class="col-12 col-md-6">
-          <h2>Objetivo:</h2>
-          <p>El objetivo de este ejemplo es mostrar cómo se importar un proyecto desde el ordenador, cómo se leen código QR o código de barra.</p>
-        </div>
-<div class="col-12">
-     <h2>Pasos a Seguir</h2>
-<ol>
-    <li>Abrir el entorno de desarrollo App Inventor.
-        <ol type="a">
-          <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
-          <li>Pulsar el botón create app!</li>
-          <li>Selecciona una cuenta de Google</li>
-        </ol>
-      </li>
-      <li>Pulsa el menú Projects -> Import project (.aia) from my computer... (Descargar el proyecto que se proporciona en el botón) </li>
-  <div class="my-3 card">
-      <div class="card-body text-center">
-        <img  src="images/import.png" alt="Pestaña designer" class="img-fluid"/>
-      </div>
-      <div class="card-footer small text-muted">
-          <a href="projects/cashRegister.aia" download="CashRegister.aia"> 
-            <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar proyecto (.aia) </button>
-          </a>
-    </div>
-  </div>
-  <li>Cambia a la pestaña Blocks (Arriba a la derecha)
-      <div class="my-3 card">
-          <div class="card-body text-center">
-      <img  src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
-      </div>
-      <div class="card-footer small text-muted">
-          Pestaña para cambiar a modo desarrollador de lógica.
-      </div>
-      </li>
-  
-      <li>Lo primero de todo se creará una lista vacia que irá almacenando los precios que se lean
-          <div class="my-3 card">
-              <div class="card-body text-center">
-          <img  src="images/createList.png" alt="variable con lista vacia" class="img-fluid" />
-          </div>
-          <div class="card-footer small text-muted">
-              Creación de una lista vacia
-          </div>
-      </li>
-
-      <li>Tras ello se indicará que tras pulsar el botón se encenderá el modo leer código de barras o código QR
-          <div class="my-3 card">
-              <div class="card-body text-center">
-          <img  src="images/activarQRReader.png" alt="variable con lista vacia" class="img-fluid" />
-          </div>
-          <div class="card-footer small text-muted">
-              Inicio de lectura de Código QR o Código de Barras tras pulsar el botón
-          </div>
-      </li>
-      <li>En la última parte de la lógica se indicará que tras leer un código QR o de barras si el valor es numérico entonces se generá un valor aleatorio de precio, se hará un sonido de caja registradora, se añadirá el valor generado aleatoriamente a la variable que contiene la lista de precios, se mostrará la lista de precios para finalmente calcular el total. Si el valor leido no es un número se mostrará un mensaje de error.
-          <div class="my-3 card">
-              <div class="card-body text-center">
-          <img  src="images/leyendoCodigoQR.png" alt="variable con lista vacia" class="img-fluid" />
-          </div>
-          <div class="card-footer small text-muted">
-              Lógica tras leer el código de barras o código QR
-          </div>
-      </li>
-
-      <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
-          <div class="my-3 card">
-              <div class="card-body text-center">
-          <img  src="images/buildQRCode.png" alt="botón del monitor serial" class="img-fluid"/>
-          </div>
-          <div class="card-footer small text-muted">
-              Pestaña para compilar y descargar la aplicación.
-          </div>
-        </li>
-         
-        <li>Abre la aplicación App Inventor desde el móvil y escanea el código QR.
-            <div class="my-3 card">
-                <div class="card-body text-center">
-            <img  src="images/arrancarAppInventor.jpg" alt="botón del monitor serial"  class="img-fluid"/>
-            </div>
-            <div class="card-footer small text-muted">
-                Arrancar App Inventor.
-            </div>
-            <div class="my-3 card">
-                <div class="card-body text-center">
-            <img  src="images/leerCodigoAppInventor.jpg" alt="botón del monitor serial"  class="img-fluid"/>
-            </div>
-            <div class="card-footer small text-muted">
-                Pulsar Escanear Código QR.
-            </div>
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About</a>
           </li>
-      
-          <li>Instala la aplicación y pruébala. 
-              <div class="my-3 card">
-                  <div class="card-body text-center">
-              <img  src="images/instalarAplicacion.jpg" alt="botón del monitor serial" class="img-fluid"/>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Tutorial 3:
+      <small>Cash Register</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Tutorial 3: Cash Register</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img class="img-fluid rounded mb-4" src="images/project3.png" alt="">
+      </div>
+      <div class="col-12 col-md-6">
+        <h2>Objetivo:</h2>
+        <p>El objetivo de este ejemplo es mostrar cómo se importar un proyecto desde el ordenador, cómo se leen código
+          QR o código de barra.</p>
+      </div>
+      <div class="col-12">
+        <h2>Pasos a Seguir</h2>
+        <ol>
+          <li>Abrir el entorno de desarrollo App Inventor.
+            <ol type="a">
+              <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
+              <li>Pulsar el botón create app!</li>
+              <li>Selecciona una cuenta de Google</li>
+            </ol>
+          </li>
+          <li>Pulsa el menú Projects -> Import project (.aia) from my computer... (Descargar el proyecto que se
+            proporciona en el botón) </li>
+          <div class="my-3 card">
+            <div class="card-body text-center">
+              <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
+            </div>
+            <div class="card-footer small text-muted">
+              <a href="projects/cashRegister.aia" download="CashRegister.aia">
+                <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar proyecto (.aia)
+                </button>
+              </a>
+            </div>
+          </div>
+          <li>Cambia a la pestaña Blocks (Arriba a la derecha)
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
               </div>
               <div class="card-footer small text-muted">
-                  Aceptar Instalar aplicación
+                Pestaña para cambiar a modo desarrollador de lógica.
               </div>
-              <div class="my-3 card">
-                  <div class="card-body text-center">
-              <img  src="images/darPermisosAplicacion.jpg" alt="botón del monitor serial" class="img-fluid"/>
+          </li>
+
+          <li>Lo primero de todo se creará una lista vacia que irá almacenando los precios que se lean
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/createList.png" alt="variable con lista vacia" class="img-fluid" />
               </div>
               <div class="card-footer small text-muted">
+                Creación de una lista vacia
+              </div>
+          </li>
+
+          <li>Tras ello se indicará que tras pulsar el botón se encenderá el modo leer código de barras o código QR
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/activarQRReader.png" alt="variable con lista vacia" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Inicio de lectura de Código QR o Código de Barras tras pulsar el botón
+              </div>
+          </li>
+          <li>En la última parte de la lógica se indicará que tras leer un código QR o de barras si el valor es numérico
+            entonces se generá un valor aleatorio de precio, se hará un sonido de caja registradora, se añadirá el valor
+            generado aleatoriamente a la variable que contiene la lista de precios, se mostrará la lista de precios para
+            finalmente calcular el total. Si el valor leido no es un número se mostrará un mensaje de error.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/leyendoCodigoQR.png" alt="variable con lista vacia" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Lógica tras leer el código de barras o código QR
+              </div>
+          </li>
+
+          <li>Pulsa el botón del título Build y seleciona la opción App (provide QR code for .apk).
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/buildQRCode.png" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Pestaña para compilar y descargar la aplicación.
+              </div>
+          </li>
+
+          <li>Abre la aplicación App Inventor desde el móvil y escanea el código QR.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/arrancarAppInventor.jpg" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Arrancar App Inventor.
+              </div>
+              <div class="my-3 card">
+                <div class="card-body text-center">
+                  <img src="images/leerCodigoAppInventor.jpg" alt="botón del monitor serial" class="img-fluid" />
+                </div>
+                <div class="card-footer small text-muted">
+                  Pulsar Escanear Código QR.
+                </div>
+          </li>
+
+          <li>Instala la aplicación y pruébala.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/instalarAplicacion.jpg" alt="botón del monitor serial" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Aceptar Instalar aplicación
+              </div>
+              <div class="my-3 card">
+                <div class="card-body text-center">
+                  <img src="images/darPermisosAplicacion.jpg" alt="botón del monitor serial" class="img-fluid" />
+                </div>
+                <div class="card-footer small text-muted">
                   Aceptar Instalar aplicación sin firma reconocida
-              </div>
-            </li>
-</ol>
-<!--
+                </div>
+          </li>
+        </ol>
+        <!--
 <h2>Explicación del Código de este Ejemplo</h2>
 
 <p>La función Setup se encarga de indicar la velocidad a la que se comunicará la placa con el ordenador y configurar el pin D5 como pin de salida de señal.</p>
 
 <p>En la función loop se encarga de escribir un mensaje indicando qué va a hacer con el led, dar la orden de encender el led y esperar 2000 milisegundos (2 segundos). En la segunda parte de la función se indica que se va a apagar el led, se da la orden de no dar voltaje al pin y se espera 2000 milisegunso (2 segundos).</p>
 -->
-       </div>
       </div>
-      <!-- /.row -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
     </div>
     <!-- /.container -->
+  </footer>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro Montero Montes. Universidad Carlos III de Madrid.</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 
 </html>
