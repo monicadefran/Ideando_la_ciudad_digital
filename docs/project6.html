@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>IoT Workshop</title>
+  <title>Ideando la Ciudad Digital - Workshop</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,7 @@
   <link href="css/modern-business.css" rel="stylesheet">
 
   <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -25,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">IoT Workshop</a>
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital -Workshop</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -34,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">Sobre Nosotros</a>
           </li>
         </ul>
       </div>
@@ -46,338 +47,608 @@
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Tutorial 6:
-      <small>Semáforo Móvil</small>
+      <small>Calculadora</small>
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="index.html">Portada</a>
       </li>
-      <li class="breadcrumb-item active">Tutorial 6: Semáforo Móvil</li>
+      <li class="breadcrumb-item active">Tutorial 6: Calculadora</li>
     </ol>
 
     <!-- Intro Content -->
     <div class="row">
       <div class="col-12 col-md-6">
-        <img class="img-fluid rounded mb-4" src="images/mainMobileTrafficLight.jpg" alt="">
+        <img class="img-fluid rounded mb-4" src="images/appinventor_portada.png" alt="">
       </div>
       <div class="col-12 col-md-6">
         <h2>Objetivo:</h2>
-        <p>El objetivo de este ejemplo es mostrar cómo crear un punto de acceso Wifi con la placa NodeMCU y un
-          mini-servidor de páginas web que proporcionará una página al dispositivo móvil que se conecte para poder
-          manejar las luces del semáforo.</p>
-        <p>Este proyecto hace uso del circuito que simula un semáforo</p>
+        <p>El objetivo de este tutorial es construir una interfaz sencilla para el diseño de una lógica que permita
+          construir una calculadora.</p>
       </div>
       <div class="col-12">
+        <h2>Conceptos Básicos:</h2>
+
+        <div class="card my-3">
+          <div class="card-header bg-info outline-step">
+            Bloque Matemáticas/Math
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Son los bloques que nos permiten diseñar las operaciones sobre números dentro de AppInventor. 
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/user-interfaces.svg" alt="Pestaña Blocks" class="img-fluid"
+                      style="width: 640px;" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Ilustración de los diferentes bloques de operaciones.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-3">
+          <div class="card-header bg-info outline-step">
+            ¿Qué es Compilar (Construir/"Build")?
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Es convertir el código fuente (texto “entendible” por el ser humano) u otra
+                    representación de lógica/acciones en un código comprensible por un ordenador.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/compilar.svg" alt="Pestaña Blocks" class="img-fluid" style="width: 640px;" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Ejemplo de código fuente en C y su resultado tras la compilación.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h2>Pasos a Seguir</h2>
-        <ol>
-          <li>Desconecte el cable usb de la placa o del ordenador (con el objetivo de evitar cortocircuitos)</li>
-          <li>Coloque la parte lateral donde aparecen más pines con el prefijo "D" conectada a la placa en la primera
-            columna. Los demás pines quedarán en el aire como en la imagen.</li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/baseInicial.png" alt="Base Inicial" />
-            </div>
-            <div class="card-footer small text-muted">
-              Protoboard conectada con la NodeMCU.
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            1. Acceso al Entorno
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Abrir el entorno de desarrollo App Inventor.
+                    <ol type="a">
+                      <li>Accede a la siguiente dirección: <a
+                          href="https://appinventor.mit.edu/">https://appinventor.mit.edu/</a></li>
+                      <li>Pulsa el botón create app!</li>
+                      <li>Selecciona una cuenta de Google</li>
+                      <li>Acepta los términos y condiciones (solo la primera vez que se accede a la plataforma)</li>
+                    </ol>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b1.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li>Coloque las resistencias, leds y cables según el esquema de circuito que se muestra a continuación:</li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/semaforo.png" alt="Semaforo" />
-            </div>
-            <div class="card-footer small text-muted">
-              Circuito Semáforo Completado.
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            2. Creación de un proyecto nuevo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulsa el botón “Start new proyect” y pon de nombre al proyecto "Tutorial Bienvenida"</li>
+                  Una vez creado el proyecto tenemos la posibilida de acceder a las dos pestañas principales "Designer"
+                  y "Blocks" desde la parte superior derecha.
+                  Por ahora nos centraremos en la pestaña "Designer" la cual nos permite diseñar la interfaz visual de
+                  la aplicación arrastrando los componetes de la barra de la izquierda ("Palette") al "Viewer".
+                  Las dos sigiuentes pestañas nos permiten ver la jerarquía de componentes y modificar las propiedades
+                  de un componente seleccionado.
+                  </li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/designer.png" alt="Pestaña designer" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Pestaña de Diseño de Interfaz de Usuario
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b2.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li>Conecte la placa al ordenador por el cable usb</li>
-          <li>Abra el entorno y copiar el siguiente código:</li>
-          <div class="my-3 card">
-
-            <div class="card-header" style="font-weight: bold;">
-              <i class="fas fa-code"></i> Código Semáforo Móvil
-            </div>
-            <div class="card-body" id="code" style="font-family: Courier New;font-size: 0.7em;">
-              <br>
-              /* Este poryecto ha sido diseñado usando un ejemplo de codigo encontrado en internet<br>
-              * a continución se presentan las licencias que expone el ejemplo inicial.<br>
-              */<br>
-              <br>
-              /*<br>
-              * Copyright (c) 2015, Majenko Technologies<br>
-              * All rights reserved.<br>
-              * <br>
-              * Redistribution and use in source and binary forms, with or without modification,<br>
-              * are permitted provided that the following conditions are met:<br>
-              * <br>
-              * * Redistributions of source code must retain the above copyright notice, this<br>
-              *&nbsp;&nbsp; list of conditions and the following disclaimer.<br>
-              * <br>
-              * * Redistributions in binary form must reproduce the above copyright notice, this<br>
-              *&nbsp;&nbsp; list of conditions and the following disclaimer in the documentation and/or<br>
-              *&nbsp;&nbsp; other materials provided with the distribution.<br>
-              * <br>
-              * * Neither the name of Majenko Technologies nor the names of its<br>
-              *&nbsp;&nbsp; contributors may be used to endorse or promote products derived from<br>
-              *&nbsp;&nbsp; this software without specific prior written permission.<br>
-              * <br>
-              * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND<br>
-              * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED<br>
-              * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br>
-              * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR<br>
-              * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES<br>
-              * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;<br>
-              * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON<br>
-              * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<br>
-              * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<br>
-              * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<br>
-              */<br>
-              <br>
-              /* Create a WiFi access point and provide a web server on it. */<br>
-              <br>
-              #include &lt;ESP8266WiFi.h&gt;<br>
-              #include &lt;WiFiClient.h&gt; <br>
-              #include &lt;ESP8266WebServer.h&gt;<br>
-              <br>
-              /* Set these to your desired credentials. */<br>
-              const char *ssid = "TallerIoTSemaforo";<br>
-              <br>
-              ESP8266WebServer server(80);<br>
-              <br>
-              <br>
-              void apagarLuces() {<br>
-              &nbsp;&nbsp;// Me aseguro de apagar todos los leds<br>
-              &nbsp;&nbsp;digitalWrite(D8,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D1,LOW);<br>
-              }<br>
-              <br>
-              /* Just a little test message.&nbsp;&nbsp;Go to http://192.168.4.1 in a web browser<br>
-              * connected to this access point to see it.<br>
-              */<br>
-              void paginaPrincipal() {<br>
-              &nbsp;&nbsp;// Me aseguro de apagar todos los leds<br>
-              &nbsp;&nbsp;digitalWrite(D8,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D1,LOW);<br>
-              &nbsp;&nbsp;const char webpage[]="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt; IoT
-              Semaforo&lt;/title&gt;&lt;style&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.lightItem {border: 2px solid
-              #a1a1a1;width: 96px;background: white;height: 96px;border-radius: 50px;margin: 5px
-              auto;}&nbsp;&nbsp;&nbsp;&nbsp; .trafficLight{border: 2px solid #a1a1a1;width: 120px;background:
-              darkgreen;height: auto;margin: 5px auto 0px auto;}&nbsp;&nbsp;&nbsp;&nbsp; .trafficLightPost{border: 2px
-              solid #a1a1a1;width: 20px;background: darkgreen;height: 180px;text-align: center;margin: 0px
-              auto;}&nbsp;&nbsp;&nbsp;&nbsp; #offButton{border: 1px solid #a1a1a1;width: 30px;background: gray;height:
-              20px;text-align: center;}&lt;/style&gt;&lt;script&gt;&nbsp;&nbsp;&nbsp;&nbsp; var xmlhttp = new
-              XMLHttpRequest();function
-              apagarLuces(){document.getElementById(\"red\").style.background=\"white\";document.getElementById(\"orange\").style.background=\"white\";document.getElementById(\"green\").style.background=\"white\";xmlhttp.open(\"GET\",
-              \"off\", true);xmlhttp.send();}&nbsp;&nbsp;&nbsp;&nbsp; function
-              change(color,element){document.getElementById(\"red\").style.background=\"white\";document.getElementById(\"orange\").style.background=\"white\";document.getElementById(\"green\").style.background=\"white\";element.style.background=color;xmlhttp.open(\"GET\",
-              color, true);xmlhttp.send();}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=\"offButton\"
-              onclick=\"apagarLuces();\"&gt;Off&lt;/div&gt;&lt;div class=\"trafficLight\"&gt;&nbsp;&nbsp;&lt;div
-              class=\"lightItem\" id=\"red\" onclick=\"change('red',this);\"&gt;&lt;/div&gt;&nbsp;&nbsp;&lt;div
-              class=\"lightItem\" id=\"orange\" onclick=\"change('orange',this);\"&gt;&lt;/div&gt;&nbsp;&nbsp;&lt;div
-              class=\"lightItem\" id=\"green\" onclick=\"change('green',this);\"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div
-              class=\"trafficLightPost\"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;";<br>
-              &nbsp;&nbsp;server.send(200, "text/html",webpage);<br>
-              &nbsp;&nbsp;/* Webpage<br>
-              &lt;!DOCTYPE html&gt;<br>
-              &lt;html&gt;<br>
-              &nbsp;&nbsp;&lt;head&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt; IoT Semaforo &lt;/title&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt; <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.lightItem {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid #a1a1a1;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 46px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: white;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 46px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 25px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 5px auto;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.trafficLight{<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid #a1a1a1;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 60px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: darkgreen;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: auto;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 5px auto 0px auto;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.trafficLightPost{<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid #a1a1a1;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 10px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: darkgreen;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 180px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 0px auto;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#offButton{<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #a1a1a1;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 30px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: gray;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 20px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var xmlhttp = new XMLHttpRequest();<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function apagarLuces(){<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("red").style.background="white";<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("orange").style.background="white";<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("green").style.background="white";<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.open("GET", "off", true);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function change(color,element){<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("red").style.background="white";<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("orange").style.background="white";<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("green").style.background="white";<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.background=color;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.open("GET", color, true);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;<br>
-              &nbsp;&nbsp;&lt;/head&gt;<br>
-              &nbsp;&nbsp;&lt;body&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="offButton" onclick="apagarLuces();"&gt;Off&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="trafficLight"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="lightItem" id="red"
-              onclick="change('red',this);"&gt;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="lightItem" id="orange"
-              onclick="change('orange',this);"&gt;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="lightItem" id="green"
-              onclick="change('green',this);"&gt;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="trafficLightPost"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&lt;/body&gt;<br>
-              &lt;/html&gt;<br>
-              */<br>
-              }<br>
-              <br>
-              void encenderVerde() {<br>
-              &nbsp;&nbsp;// Me aseguro de apagar todos los leds<br>
-              &nbsp;&nbsp;digitalWrite(D8,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D1,LOW);<br>
-              &nbsp;&nbsp;// Indica que se envie la señal de voltaje baja de 0 voltios en el pin D8<br>
-              &nbsp;&nbsp;// Es decir, encender Led Verde<br>
-              &nbsp;&nbsp;digitalWrite(D8,HIGH);<br>
-              }<br>
-              <br>
-              void encenderAmbar() {<br>
-              &nbsp;&nbsp;// Me aseguro de apagar todos los leds<br>
-              &nbsp;&nbsp;digitalWrite(D8,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D1,LOW);<br>
-              &nbsp;&nbsp;// Indica que se envie la señal de voltaje baja de 0 voltios en el pin D5<br>
-              &nbsp;&nbsp;// Es decir, encender Led Ambar<br>
-              &nbsp;&nbsp;digitalWrite(D5,HIGH);<br>
-              }<br>
-              <br>
-              void encenderRojo() {<br>
-              &nbsp;&nbsp;// Me aseguro de apagar todos los leds<br>
-              &nbsp;&nbsp;digitalWrite(D8,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D5,LOW);<br>
-              &nbsp;&nbsp;digitalWrite(D1,LOW);<br>
-              &nbsp;&nbsp;// Indica que se envie la señal de voltaje baja de 0 voltios en el pin D5<br>
-              &nbsp;&nbsp;// Es decir, encender Led Rojo<br>
-              &nbsp;&nbsp;digitalWrite(D1,HIGH);<br>
-              }<br>
-              <br>
-              void setup() {<br>
-              delay(1000);<br>
-              Serial.begin(115200);<br>
-              Serial.println();<br>
-              Serial.print("Configurando Punto de Acceso...");<br>
-              /* Si se desea poner contraseña se ha de indicar con un segundo argumento */<br>
-              WiFi.softAP(ssid);<br>
-              <br>
-              IPAddress myIP = WiFi.softAPIP();<br>
-              Serial.print("Direccion IP del punto de acceso: ");<br>
-              Serial.println(myIP);<br>
-              server.on("/", paginaPrincipal);<br>
-              &nbsp;&nbsp;server.on("/green", encenderVerde);<br>
-              &nbsp;&nbsp;server.on("/orange", encenderAmbar);<br>
-              &nbsp;&nbsp;server.on("/red", encenderRojo);<br>
-              &nbsp;&nbsp;server.on("/off", apagarLuces);<br>
-              server.begin();<br>
-              Serial.println("Servidor de HTTP iniciado (Servidor de paginas webs)");<br>
-              <br>
-              &nbsp;&nbsp;// Indica la configuración de pines que se utilizarán<br>
-              &nbsp;&nbsp;// Indica que el pin D1 será de salida (Led rojo)<br>
-              &nbsp;&nbsp;pinMode(D1,OUTPUT);<br>
-              &nbsp;&nbsp;// Indica que el pin D5 será de salida (Led ambar)<br>
-              &nbsp;&nbsp;pinMode(D5,OUTPUT);<br>
-              &nbsp;&nbsp;// Indica que el pin D8 será de salida (Led verde)<br>
-              &nbsp;&nbsp;pinMode(D8,OUTPUT);<br>
-              }<br>
-              <br>
-              void loop() {<br>
-              server.handleClient();<br>
-              }
-              <br>
-            </div>
-            <div class="card-footer small text-muted">
-              <button type="button" class="btn btn-success btn-block" onclick="copyToClipboard('#code','#copyButton')"
-                id="copyButton">Presionar para copiar el código en el portapapeles</button>
-            </div>
-
-
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
           </div>
-          <li>Modifique el valor que se encuentra entre comillas en la línea 44 por uno inventado que pueda recordar
-            facilmente. Este valor será el nombre del punto de acceso wifi al cual se conectará su móvil.</li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/ssid.png" alt="SSID" />
-            </div>
-            <div class="card-footer small text-muted">
-              Línea para modificar el nombre de la red.
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            3. Creación de un componente etiqueta (label)
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las
+                    siguientes propiedades del componente:
+                    <ol type="a">
+                      <li>FontBold: “marcado” (hará que el texto esté en negrita)</li>
+                      <li>FontSize: 28 (hará que el texto sea más grande)</li>
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                      <li>Text: “Welcome to UC3M!” (cambiará el texto que se muestra)</li>
+                      <li>TextAligment: “Center: 1” (hará que el texto esté centrado)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b3.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <li>Pulse el segundo botón del entorno para compilar y subir el código.</li>
-
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/upload.png" alt="botón de upload" />
-            </div>
-            <div class="card-footer small text-muted">
-              Botón para subir ("upload") el código a la placa.
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            4. Creación del componente de alineación horizontal
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente HorizontalArrangement del margen derecho (Palette-> Layout) debajo de la
+                    etiqueta anterior. Este componente permite colocar los elementos horizontalmente. Cambia las
+                    siguientes propiedades del componente:
+                    <ol type="a">
+                      <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente en el centro)
+                      </li>
+                      <li>Align Horizontal: “Center: 3” (hará que el contenido esté alineado horizontalmente en centro)
+                      </li>
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b4.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <li>Tras transferir el código busque en su dispositivo móvil una red wifi a la que conectarse. Seleccionela y
-            vaya al navegador de su móvil e introduzca la siguiente dirección:</li>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            5. Creación de una etiqueta (label) y un campo de texto (Textbox)
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Label y TextBox (Palette->User Interface) dentro del componente anterior.
+                    Cambia
+                    las siguientes propiedades de los componentes:
+                    <ol type="a">
+                      <li>Label.Text: “Name:” (cambiará el texto que se muestra)</li>
+                      <li>Textbox.Hint: “Ciudad” (cambiará el texto de placeholder)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b5.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <b>http://192.168.4.1</b>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            6. Creación de un componente imagen
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Image (Palette-> User Interface) debajo del contenedor horizontal. Cambia
+                    las siguientes propiedades del componente (al final del paso se proporciona una animación de ayuda):
+                    <ol type="a">
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                      <li>Picture->Upload File->Examinar… y selecciona la siguiente imagen tras descargarla: (cambiará
+                        la imagen a mostrar)
+                      </li>
+                    </ol>
+                  </li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/ciudad.jpg" alt="botón de upload" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    <a href="images/ciudad.jpg" download="city.jpg">
+                      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b6.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            7. Creación de un botón
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Button (Palette-> User Interface) debajo de la imagen anterior.
+                    <ol type="a">
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                      <li>Text: “Greetings:” (cambiará el texto del botón)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b7.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <li> Pulse las luces del semáforo que le aparece en su pantalla móvil y verá como se encienden los leds de su
-            circuito.</li>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            8. Creación del componente de notificaiones (es un componente no visual)
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Notifier (Palette-> User Interface) en el visor. Este componente aparece
+                    incluido
+                    en componente no visuales.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b8.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-        </ol>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            9. Cambiar al modo desarrollo de lógica por bloques
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Cambia a la pestaña Blocks (Arriba a la derecha): Desde esta pestaña se puede diseñar una lógica
+                    de aplicación por bloques. Los diferentes bloques están ordenados por categorías y para usarlos tan
+                    solo hay que arrastrarlos desde el menú al lienzo.</li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Pestaña para cambiar a modo desarrollador de lógica.
+                  </div>
+                </div>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/blocks.png" alt="Pestaña Blocks" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Pestaña de Implementación de la Lógica
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b9.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-        <h2>Explicación del Código de este Ejemplo</h2>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            10. Implementación de la lógica de aplicación
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Construye el siguiente estructura arrastrando los bloques:
+                    <ol type="a">
+                      <li>El bloque de marrón indique que cuando se haga “Click” sobre el botón se hará lo que hay
+                        dentro.</li>
+                      <li>El bloque morado hace que se muestre una alerta con el texto que se conecta.</li>
+                      <li>El bloque magenta concatena dos o más bloques de texto</li>
+                      <li>El bloque magenta pequeño de arriba contiene el valor: "Hello, "</li>
+                      <li>El bloque verde representa el valor de texto que contiene el campo de texto (Textbox)</li>
+                    </ol>
+                  </li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/firstProjectBlocks.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Lógica de la aplicación para mostrar un mensaje.
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b10.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-        <p>TODO</p>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            11. Compilación de la aplicación e instalación en el dispositivo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulse el botón de Construir "Build" y seleccione proporcionar código QR para la aplicación QR</li>
+                  <li>Lea el código QR con su dispositivo Android y descargue la aplicación</li>
+                  <li>Si es la primera vez que instala una aplicación desde App Inventor es necesario permitir
+                    al dispositivo móvil instalar aplicaciones de origen desconocido (es decir, aplicaciones fuera del
+                    Google Play Store). Para ello:
+                    <ul>
+                      <li>Si durante el primer intento de instalación le proporcione un acceso directo a Ajustes->
+                        Seguridad seleccione instalar aplicaciones de origen desconocido</li>
+                      <li>Si tan solo le deniega la posibilida de instalar. Siga los siguientes pasos:
+                        <ol type="a">
+                          <li>Vaya a Ajustes de su dispositivo Android (Settings)</li>
+                          <li>Acceda a la opción de Seguridad</li>
+                          <li>Marque el checkbox de permitir instalaciones de origen desconocido</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Tras tener acceso a instalaciones de origen desconocido, intente instalar la aplicación de nuevo.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b11.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
+        <div class="card">
+          <div class="card-header bg-info outline-step">
+            Extra I - Depuración de la aplicación mientras se desarrolla
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Esta opción de depuración nos permite ir probando la aplicación en el dipositivo móvil mientras se
+                    está diseñando la interfaz o definiendo la lógica con el objetivo de arreglar errores:
+                    <ol type="a">
+                      <li>Instale la aplicación Android: <a
+                          href="https://play.google.com/store/apps/details?id=edu.mit.appinventor.aicompanion3">MIT AI2
+                          Companion</a> </li>
+                      <li>Pulse el botón Conectar ("Connect") de la parte superior y seleccione "AI Companion".</li>
+                      <li>Escanee el código QR o escriba el código en la aplicación de Android</li>
+                      <li>Pruebe a modificar alguna parte de la aplicación y vea los cambios. Por ejemplo, el texto de
+                        la etiqueta "Welcome to UC3M!" por "Welcome to IES Leganés!"</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b12.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-info text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-extra-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-info outline-step">
+            Extra II - Solucionar problema de que el botón de saludar no aparece en pantallas pequeñas
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Al ejecutar la aplicación en un móvil en posición horizontal o en una pantalla pequeña no se puede
+                    ver correctamente el botón de saludar. Para este problema se puede plantear dos opciones:
+                    <ul>
+                      <li>Forzar a que la aplicación solo se pueda ver en posición vertical "Portrait" en las opciones
+                        de la pantalla Screen. Sin embargo, esta opción no resuelve el problema si el dispositivo tiene
+                        una pantalla pequeña.</li>
+                      <li>Agregar un componete de alineación vertical con la posibilidad de hacer scroll e introducir
+                        todos los elementos de la Screen en este.</li>
+                      </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b13.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-info text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-extra-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /.row -->
-
-    <!-- Team Members -->
-
-
-
-
   </div>
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Taller de Internet of Things. Mónica Sánchez de Francisco y Álvaro Montero
-        Montes. Universidad Carlos III de Madrid.</p>
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
     </div>
     <!-- /.container -->
   </footer>
