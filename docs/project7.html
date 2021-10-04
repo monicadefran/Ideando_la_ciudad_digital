@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>IoT Workshop</title>
+  <title>Ideando la Ciudad Digital - Workshop</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,7 @@
   <link href="css/modern-business.css" rel="stylesheet">
 
   <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -25,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">IoT Workshop</a>
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital -Workshop</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -34,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">Sobre Nosotros</a>
           </li>
         </ul>
       </div>
@@ -46,291 +47,610 @@
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Tutorial 7:
-      <small>Telégrafo</small>
+      <small>Tutorial del juego Machaca al Topo / MoleMash: </small>
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="index.html">Portada</a>
       </li>
-      <li class="breadcrumb-item active">Tutorial 7: Telégrafo</li>
+      <li class="breadcrumb-item active">Tutorial 2: ¡Hola Mundo! / Hello World!</li>
     </ol>
 
     <!-- Intro Content -->
     <div class="row">
       <div class="col-12 col-md-6">
-        <img class="img-fluid rounded mb-4" src="images/mainTelegraph.jpg" alt="">
+        <img class="img-fluid rounded mb-4" src="images/appinventor_portada.png" alt="">
       </div>
       <div class="col-12 col-md-6">
         <h2>Objetivo:</h2>
-        <p>El objetivo de este ejemplo es mostrar cómo se puede conectar la placa a un broker ("servidor") mediante el
-          protocolo MQTT. Para ello se ha desarrollado un ejemplo de un telégrafo en el que dos personas se podrán
-          comunicar mediante un botón y un zumbador.</p>
+        <p>El objetivo principal de este proyecto es mostrar los conceptos más básicos de la herramienta App Inventor al
+          mismo tiempo que se desarrolla un proyecto.</p>
       </div>
       <div class="col-12">
+        <h2>Conceptos Básicos:</h2>
+
+        <div class="card my-3">
+          <div class="card-header bg-info outline-step">
+            ¿Qué es una Interfaz de Usuario?
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Es el medio por el que los usuarios se pueden comunicar con las máquinas,
+                    computadoras o dispositivos y viceversa. Ejemplo: Pantalla de móvil, teclado de ordenador, altavoz,
+                    micrófono…
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/user-interfaces.svg" alt="Pestaña Blocks" class="img-fluid"
+                      style="width: 640px;" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Ilustración de diferentes tipos de interfaces de usuario durante la ejecución de una aplicación.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card my-3">
+          <div class="card-header bg-info outline-step">
+            ¿Qué es Compilar (Construir/"Build")?
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Es convertir el código fuente (texto “entendible” por el ser humano) u otra
+                    representación de lógica/acciones en un código comprensible por un ordenador.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/compilar.svg" alt="Pestaña Blocks" class="img-fluid" style="width: 640px;" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Ejemplo de código fuente en C y su resultado tras la compilación.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h2>Pasos a Seguir</h2>
-        <ol>
-          <li>Desconecte el cable usb de la placa o del ordenador (con el objetivo de evitar cortocircuitos)</li>
-          <li>Coloque la parte lateral donde aparecen más pines con el prefijo "D" conectada a la placa en la primera
-            columna. Los demás pines quedarán en el aire como en la imagen.</li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/baseInicial.png" alt="Base Inicial" />
-            </div>
-            <div class="card-footer small text-muted">
-              Protoboard conectada con la NodeMCU.
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            1. Acceso al Entorno
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Abrir el entorno de desarrollo App Inventor.
+                    <ol type="a">
+                      <li>Accede a la siguiente dirección: <a
+                          href="https://appinventor.mit.edu/">https://appinventor.mit.edu/</a></li>
+                      <li>Pulsa el botón create app!</li>
+                      <li>Selecciona una cuenta de Google</li>
+                      <li>Acepta los términos y condiciones (solo la primera vez que se accede a la plataforma)</li>
+                    </ol>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b1.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li>Coloque las resistencias, el zumbador, el botón y cables según el esquema de circuito que se muestra a
-            continuación:</li>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/telegrafo.png" alt="Telegrafo" />
-            </div>
-            <div class="card-footer small text-muted">
-              Circuito del Telégrafo completado.
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            2. Creación de un proyecto nuevo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulsa el botón “Start new proyect” y pon de nombre al proyecto "Tutorial Bienvenida"</li>
+                  Una vez creado el proyecto tenemos la posibilida de acceder a las dos pestañas principales "Designer"
+                  y "Blocks" desde la parte superior derecha.
+                  Por ahora nos centraremos en la pestaña "Designer" la cual nos permite diseñar la interfaz visual de
+                  la aplicación arrastrando los componetes de la barra de la izquierda ("Palette") al "Viewer".
+                  Las dos sigiuentes pestañas nos permiten ver la jerarquía de componentes y modificar las propiedades
+                  de un componente seleccionado.
+                  </li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/designer.png" alt="Pestaña designer" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Pestaña de Diseño de Interfaz de Usuario
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b2.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li>Conecte la placa al ordenador por el cable usb</li>
-          <li>Abra el entorno y copiar el siguiente código:</li>
-          <div class="my-3 card">
-
-            <div class="card-header" style="font-weight: bold;">
-              <i class="fas fa-code"></i> Código Semáforo Móvil
-            </div>
-            <div class="card-body" id="code" style="font-family: Courier New;font-size: 0.7em;">
-              <br>
-              /***************************************************<br>
-              &nbsp;&nbsp;Adafruit MQTT Library ESP8266 Example<br>
-              &nbsp;&nbsp;Must use ESP8266 Arduino from:<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;https://github.com/esp8266/Arduino<br>
-              &nbsp;&nbsp;Works great with Adafruit's Huzzah ESP board & Feather<br>
-              &nbsp;&nbsp;----&gt; https://www.adafruit.com/product/2471<br>
-              &nbsp;&nbsp;----&gt; https://www.adafruit.com/products/2821<br>
-              &nbsp;&nbsp;Adafruit invests time and resources providing this open source code,<br>
-              &nbsp;&nbsp;please support Adafruit and open-source hardware by purchasing<br>
-              &nbsp;&nbsp;products from Adafruit!<br>
-              &nbsp;&nbsp;Written by Tony DiCola for Adafruit Industries.<br>
-              &nbsp;&nbsp;MIT license, all text above must be included in any redistribution<br>
-              ****************************************************/<br>
-              #include &lt;ESP8266WiFi.h&gt;<br>
-              #include "Adafruit_MQTT.h"<br>
-              #include "Adafruit_MQTT_Client.h"<br>
-              <br>
-              /************************* WiFi Access Point *********************************/<br>
-              <br>
-              // Introducir el nombre de la red wifi<br>
-              #define WLAN_SSID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "nombre red wifi"<br>
-              // Introducir la contraseña de la red wifi<br>
-              #define WLAN_PASS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "contraseña wifi"<br>
-              <br>
-              /************************* Adafruit.io Setup *********************************/<br>
-              <br>
-              #define AIO_SERVER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"192.168.0.103"<br>
-              #define
-              AIO_SERVERPORT&nbsp;&nbsp;1883&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              // use 8883 for SSL<br>
-              <br>
-              // Aqui os se tiene que indicar a <br>
-              #define EMISOR "Alice"<br>
-              #define RECEPTOR "Bob"<br>
-              <br>
-              /************ Global State (you don't need to change this!) ******************/<br>
-              <br>
-              // Create an ESP8266 WiFiClient class to connect to the MQTT server.<br>
-              WiFiClient client;<br>
-              <br>
-              Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT);<br>
-              <br>
-              /****************************** Feeds ***************************************/<br>
-              <br>
-              <br>
-              Adafruit_MQTT_Publish buttonpressed = Adafruit_MQTT_Publish(&mqtt, RECEPTOR);<br>
-              <br>
-              <br>
-              Adafruit_MQTT_Subscribe buzzer = Adafruit_MQTT_Subscribe(&mqtt, EMISOR);<br>
-              <br>
-              /*************************** Sketch Code ************************************/<br>
-              <br>
-              // Bug workaround for Arduino 1.6.6, it seems to need a function declaration<br>
-              // for some reason (only affects ESP8266, likely an arduino-builder bug).<br>
-              void MQTT_connect();<br>
-              <br>
-              void setup() {<br>
-              &nbsp;&nbsp;Serial.begin(9600);<br>
-              &nbsp;&nbsp;delay(10);<br>
-              <br>
-              &nbsp;&nbsp;Serial.println(F("Adafruit MQTT demo"));<br>
-              <br>
-              &nbsp;&nbsp;// Connect to WiFi access point.<br>
-              &nbsp;&nbsp;Serial.println(); Serial.println();<br>
-              &nbsp;&nbsp;Serial.print("Connecting to ");<br>
-              &nbsp;&nbsp;Serial.println(WLAN_SSID);<br>
-              <br>
-              &nbsp;&nbsp;WiFi.begin(WLAN_SSID, WLAN_PASS);<br>
-              &nbsp;&nbsp;while (WiFi.status() != WL_CONNECTED) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;delay(500);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;Serial.print(".");<br>
-              &nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;Serial.println();<br>
-              <br>
-              &nbsp;&nbsp;Serial.println("WiFi connected");<br>
-              &nbsp;&nbsp;Serial.println("IP address: "); Serial.println(WiFi.localIP());<br>
-              <br>
-              &nbsp;&nbsp;// Setup MQTT subscription for onoff feed.<br>
-              &nbsp;&nbsp;mqtt.subscribe(&buzzer);<br>
-              <br>
-              &nbsp;&nbsp;pinMode(D5,INPUT);<br>
-              }<br>
-              int previous=0;<br>
-              uint32_t x=0;<br>
-              <br>
-              void loop() {<br>
-              &nbsp;&nbsp;// Ensure the connection to the MQTT server is alive (this will make the first<br>
-              &nbsp;&nbsp;// connection and automatically reconnect when disconnected).&nbsp;&nbsp;See the
-              MQTT_connect<br>
-              &nbsp;&nbsp;// function definition further below.<br>
-              &nbsp;&nbsp;MQTT_connect();<br>
-              <br>
-              &nbsp;&nbsp;// this is our 'wait for incoming subscription packets' busy subloop<br>
-              &nbsp;&nbsp;// try to spend your time here<br>
-              <br>
-              &nbsp;&nbsp;Adafruit_MQTT_Subscribe *subscription;<br>
-              &nbsp;&nbsp;while ((subscription = mqtt.readSubscription(10))) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;if (subscription == &buzzer) {<br>
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Está un poquito ñapa<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String recibido = (char *)buzzer.lastread;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(recibido.equals("1")){<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tone( D1, 440);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noTone(D1);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;}<br>
-              <br>
-              &nbsp;&nbsp;int d5Value= digitalRead(D5);<br>
-              &nbsp;&nbsp;if(previous != d5Value){<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;buttonpressed.publish(d5Value);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;previous = d5Value;<br>
-              &nbsp;&nbsp;}<br>
-              <br>
-              <br>
-              &nbsp;&nbsp;// ping the server to keep the mqtt connection alive<br>
-              &nbsp;&nbsp;// NOT required if you are publishing once every KEEPALIVE seconds<br>
-              &nbsp;&nbsp;/*<br>
-              &nbsp;&nbsp;if(! mqtt.ping()) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;mqtt.disconnect();<br>
-              &nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;*/<br>
-              }<br>
-              <br>
-              // Function to connect and reconnect as necessary to the MQTT server.<br>
-              // Should be called in the loop function and it will take care if connecting.<br>
-              void MQTT_connect() {<br>
-              &nbsp;&nbsp;int8_t ret;<br>
-              <br>
-              &nbsp;&nbsp;// Stop if already connected.<br>
-              &nbsp;&nbsp;if (mqtt.connected()) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return;<br>
-              &nbsp;&nbsp;}<br>
-              <br>
-              &nbsp;&nbsp;Serial.print("Connecting to MQTT... ");<br>
-              <br>
-              &nbsp;&nbsp;uint8_t retries = 3;<br>
-              &nbsp;&nbsp;while ((ret = mqtt.connect()) != 0) { // connect will return 0 for connected<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Serial.println(mqtt.connectErrorString(ret));<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Serial.println("Retrying MQTT connection in 5 seconds...");<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mqtt.disconnect();<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delay(5000);&nbsp;&nbsp;// wait 5 seconds<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retries--;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (retries == 0) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // basically die and wait for WDT to reset me<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (1);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-              &nbsp;&nbsp;}<br>
-              &nbsp;&nbsp;Serial.println("MQTT Connected!");<br>
-              }
-              <br>
-            </div>
-            <div class="card-footer small text-muted">
-              <button type="button" class="btn btn-success btn-block" onclick="copyToClipboard('#code','#copyButton')"
-                id="copyButton">Presionar para copiar el código en el portapapeles</button>
-            </div>
-
-
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
           </div>
-          <li>Modique el nombre del Emisor y Receptor de los mensajes morse. Inventaros un alias que será vuestro emisor
-            e intercambialo con otro grupo (el otro grupo deberá de ponerlo como receptor). (Línea 33 y 34).</li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/alias.png" alt="SSID" />
-            </div>
-            <div class="card-footer small text-muted">
-              Línea para modificar los alias de los dispositivos.
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            3. Creación de un componente etiqueta (label)
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Label del margen derecho (Palette->User Interface) al visor. Cambia las
+                    siguientes propiedades del componente:
+                    <ol type="a">
+                      <li>FontBold: “marcado” (hará que el texto esté en negrita)</li>
+                      <li>FontSize: 28 (hará que el texto sea más grande)</li>
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                      <li>Text: “Welcome to UC3M!” (cambiará el texto que se muestra)</li>
+                      <li>TextAligment: “Center: 1” (hará que el texto esté centrado)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b3.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <li>Modique las credenciales de la red Wifi. (Línea 23 y 25).</li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/wifi.png" alt="SSID" />
-            </div>
-            <div class="card-footer small text-muted">
-              Línea para modificar el SSID (Service Set Identifier) y la contraseña para conectarse a un Punto de Acceso
-              Wifi.
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            4. Creación del componente de alineación horizontal
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente HorizontalArrangement del margen derecho (Palette-> Layout) debajo de la
+                    etiqueta anterior. Este componente permite colocar los elementos horizontalmente. Cambia las
+                    siguientes propiedades del componente:
+                    <ol type="a">
+                      <li>Align Vertial: “Center: 2” (hará que el contenido esté alineado verticalmente en el centro)
+                      </li>
+                      <li>Align Horizontal: “Center: 3” (hará que el contenido esté alineado horizontalmente en centro)
+                      </li>
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b4.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <li>Pulse el segundo botón del entorno para compilar y subir el código.</li>
-
-
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/upload.png" alt="botón de upload" />
-            </div>
-            <div class="card-footer small text-muted">
-              Botón para subir ("upload") el código a la placa.
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            5. Creación de una etiqueta (label) y un campo de texto (Textbox)
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Label y TextBox (Palette->User Interface) dentro del componente anterior.
+                    Cambia
+                    las siguientes propiedades de los componentes:
+                    <ol type="a">
+                      <li>Label.Text: “Name:” (cambiará el texto que se muestra)</li>
+                      <li>Textbox.Hint: “Ciudad” (cambiará el texto de placeholder)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b5.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li>Tras transferir el código abra la consola de monitorización y verifique que se conecta a la red.</li>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/monitor.png" alt="botón del monitor serial" />
-            </div>
-            <div class="card-footer small text-muted">
-              Botón para acceder al cable serial.
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            6. Creación de un componente imagen
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Image (Palette-> User Interface) debajo del contenedor horizontal. Cambia
+                    las siguientes propiedades del componente (al final del paso se proporciona una animación de ayuda):
+                    <ol type="a">
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                      <li>Picture->Upload File->Examinar… y selecciona la siguiente imagen tras descargarla: (cambiará
+                        la imagen a mostrar)
+                      </li>
+                    </ol>
+                  </li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/ciudad.jpg" alt="botón de upload" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    <a href="images/ciudad.jpg" download="city.jpg">
+                      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b6.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li> Una vez conectados ambos se podrá empezar la comunicación por morse</li>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-        </ol>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            7. Creación de un botón
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Button (Palette-> User Interface) debajo de la imagen anterior.
+                    <ol type="a">
+                      <li>Width: “Fill parent” (hará que ocupe todo el ancho de la pantalla)</li>
+                      <li>Text: “Greetings:” (cambiará el texto del botón)</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b7.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-        <h2>Explicación del Código de este Ejemplo</h2>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            8. Creación del componente de notificaiones (es un componente no visual)
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente Notifier (Palette-> User Interface) en el visor. Este componente aparece
+                    incluido
+                    en componente no visuales.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b8.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-        <p>TODO</p>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            9. Cambiar al modo desarrollo de lógica por bloques
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Cambia a la pestaña Blocks (Arriba a la derecha): Desde esta pestaña se puede diseñar una lógica
+                    de aplicación por bloques. Los diferentes bloques están ordenados por categorías y para usarlos tan
+                    solo hay que arrastrarlos desde el menú al lienzo.</li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/blockTab.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Pestaña para cambiar a modo desarrollador de lógica.
+                  </div>
+                </div>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/blocks.png" alt="Pestaña Blocks" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Pestaña de Implementación de la Lógica
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b9.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            10. Implementación de la lógica de aplicación
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Construye el siguiente estructura arrastrando los bloques:
+                    <ol type="a">
+                      <li>El bloque de marrón indique que cuando se haga “Click” sobre el botón se hará lo que hay
+                        dentro.</li>
+                      <li>El bloque morado hace que se muestre una alerta con el texto que se conecta.</li>
+                      <li>El bloque magenta concatena dos o más bloques de texto</li>
+                      <li>El bloque magenta pequeño de arriba contiene el valor: "Hello, "</li>
+                      <li>El bloque verde representa el valor de texto que contiene el campo de texto (Textbox)</li>
+                    </ol>
+                  </li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/firstProjectBlocks.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Lógica de la aplicación para mostrar un mensaje.
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b10.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            11. Compilación de la aplicación e instalación en el dispositivo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulse el botón de Construir "Build" y seleccione proporcionar código QR para la aplicación QR</li>
+                  <li>Lea el código QR con su dispositivo Android y descargue la aplicación</li>
+                  <li>Si es la primera vez que instala una aplicación desde App Inventor es necesario permitir
+                    al dispositivo móvil instalar aplicaciones de origen desconocido (es decir, aplicaciones fuera del
+                    Google Play Store). Para ello:
+                    <ul>
+                      <li>Si durante el primer intento de instalación le proporcione un acceso directo a Ajustes->
+                        Seguridad seleccione instalar aplicaciones de origen desconocido</li>
+                      <li>Si tan solo le deniega la posibilida de instalar. Siga los siguientes pasos:
+                        <ol type="a">
+                          <li>Vaya a Ajustes de su dispositivo Android (Settings)</li>
+                          <li>Acceda a la opción de Seguridad</li>
+                          <li>Marque el checkbox de permitir instalaciones de origen desconocido</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Tras tener acceso a instalaciones de origen desconocido, intente instalar la aplicación de nuevo.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b11.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-info outline-step">
+            Extra I - Depuración de la aplicación mientras se desarrolla
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Esta opción de depuración nos permite ir probando la aplicación en el dipositivo móvil mientras se
+                    está diseñando la interfaz o definiendo la lógica con el objetivo de arreglar errores:
+                    <ol type="a">
+                      <li>Instale la aplicación Android: <a
+                          href="https://play.google.com/store/apps/details?id=edu.mit.appinventor.aicompanion3">MIT AI2
+                          Companion</a> </li>
+                      <li>Pulse el botón Conectar ("Connect") de la parte superior y seleccione "AI Companion".</li>
+                      <li>Escanee el código QR o escriba el código en la aplicación de Android</li>
+                      <li>Pruebe a modificar alguna parte de la aplicación y vea los cambios. Por ejemplo, el texto de
+                        la etiqueta "Welcome to UC3M!" por "Welcome to IES Leganés!"</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b12.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-info text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-extra-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-info outline-step">
+            Extra II - Solucionar problema de que el botón de saludar no aparece en pantallas pequeñas
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Al ejecutar la aplicación en un móvil en posición horizontal o en una pantalla pequeña no se puede
+                    ver correctamente el botón de saludar. Para este problema se puede plantear dos opciones:
+                    <ul>
+                      <li>Forzar a que la aplicación solo se pueda ver en posición vertical "Portrait" en las opciones
+                        de la pantalla Screen. Sin embargo, esta opción no resuelve el problema si el dispositivo tiene
+                        una pantalla pequeña.</li>
+                      <li>Agregar un componete de alineación vertical con la posibilidad de hacer scroll e introducir
+                        todos los elementos de la Screen en este.</li>
+                      </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b13.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-info text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-extra-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /.row -->
-
-    <!-- Team Members -->
-
-
-
-
   </div>
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Taller de Internet of Things. Mónica Sánchez de Francisco y Álvaro Montero
-        Montes. Universidad Carlos III de Madrid.</p>
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
     </div>
     <!-- /.container -->
   </footer>
