@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Ideando la Ciudad Digital Workshop</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+  <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Tutorial 4:
+      <small>Galería de imágenes</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Tutorial 4: Galería de imágenes</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img class="img-fluid rounded mb-4" src="images/img_inicio_tuto3.png" alt="">
+      </div>
+      <div class="col-12 col-md-6">
+        <h2>Objetivo:</h2>
+        <p>El objetivo de este tutorial es hacer una galería de imágenes que funcionen con un botón de next. Dentro de
+          ese bloque vamos a aprender como se comportan ciertos elementos de appInventor y el funcionamiento del bloque
+          if else</p>
+      </div>
+      <div class="col-12">
+        <h2>Pasos a Seguir</h2>
+        <ol>
+          <li>Abrir el entorno de desarrollo App Inventor.
+            <ol type="a">
+              <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
+              <li>Pulsar el botón create app!</li>
+              <li>Selecciona una cuenta de Google</li>
+            </ol>
+          </li>
+
+
+
+          <li>Pulsa el menú Projects -> Star new project
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Creando nuevo proyecto
+              </div>
+            </div>
+          </li>
+          <li> Añadir las tres imágenes del galería de imágenes que vamos a crear...(Descargar el proyecto que se
+            proporciona en el botón)</li>
+          <li> Lo primero que hacemos es decargar el siguiente archivo. </li>
+          <div class="card-footer small text-muted">
+            <a href="images/imagenes.zip" download="imagenes.zip">
+              <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar archivo (.zip) </button>
+            </a>
+          </div>
+          <li> Descomprime el archivo .zip y añade las imagenes al aparado de recursos media como te mostramos
+            acontinuación
+            <ul>
+              <li>Ve al apartado Media, situado abajo a la derecha, y presionar el bóton Upload File para cargar las
+                imágenes como se muestra a continuación</li>
+            </ul>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_0.png" alt="Pestaña designer" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Agregar recursos externos (imágenes) al proyecto.
+              </div>
+            </div>
+          </li>
+
+          <li>Añadimos un elemento botón y un elemento imágen</li>
+          <li>En la parte de propiedades de cada elemento, primero cambiamos las propiedades de la imagen, Height: Fill
+            partent... y Width: Fill partent... En Picture eleguimos las tres imágenes (img1.jpg, img2.jpg, img3.jpg) y
+            nos aseguramos de que el botón de check de ScalePictureToFit esté selccionado. Cambiamos el nombre del botón
+            a Nextboton, con los botónes que encontramos en Components
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_2.png" alt="Pestaña designer" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Configuración del componente imagen que dónde será mostrada las diferentes imagénes.
+              </div>
+            </div>
+          </li>
+          <li>Nos vamos a la parte de desarrollo para implementar toda la lógica de la aplicación
+            <ol>
+              <li> Los primero que vamos hacer es crear una variable global, que encontramos en el bloque de Variables.
+                Y lo vamos a unir con una lista donde vamos a integrar las tres imágnes que tenemos en media, como se
+                muestra en la imágen de abajo.</li>
+              <ul>
+                <li> Por defecto algunos elementos de appInventor vienen con ciertas propiedades que podemos cambiar. En
+                  el caso de la lista vamos a añadir un Item más para poder tener nuestras tres imagenes. Para ello
+                  pinchamos en la rudeda dentada de la izquierda del elemento y arrastrando añadimos el item.</li>
+              </ul>
+            </ol>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_3.png" alt="Varaible global con lista" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Añadir cabidad para poner más piezas.
+              </div>
+            </div>
+          </li>
+          <li> Ahora vamos a darle un nombre a la variable global: imageFiles. El primer modulo de programación nos
+            quedaría como acontinuación.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_5.png" alt="Varaible global con lista" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Creación e inicialización de la variable imageFiles con la lista de imagenes
+              </div>
+            </div>
+          </li>
+          <li> El siguiente paso es iniciar otra varaible global que nos va a ayudar a recorrer la lista. Esta varaible
+            la vamos a llamar "index", y la vamos a iniciar en 1, para hacer referencia al primer elemento de la lista
+            (img1.jpg). Deberíamos tener algo parecido a la imagen que mostramos a continuación.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_6.png" alt="Varaible global index" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Inicialización de la variable index a 1.
+              </div>
+            </div>
+          </li>
+          <li> Por útimo vamos a implementar la lógica del botón. El funcionamiento del botón responde a que cada vez
+            que hacemos click pasa a la siguiente imágen.
+            <ol>
+              <li> Lo primero es elegir uno de los elementos de control del botón y que cuando pulsemos el botón ocurra
+                algo.</li>
+              <li> Después debemos inroduccir dentro del comportamiento del botón la lógica del if.</li>
+              <li> La condición dentro del if la ponemos de la siguiene manera, si la variable global index es menor que
+                la longuitud de la lista de la variable global de imágenes, le sumamos 1 a la variable global index,
+                sino lo que hacemos es que la variable global index sea 1, como al inicio. Como se muestra acontinuación
+              </li>
+            </ol>
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_7.png" alt="Pestaña designer" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Lógica de la aplicación para cambiar de imagen tras pulsar un botón
+              </div>
+            </div>
+          </li>
+          <li> En el útimo bloque lo que hacemos es decirle donde tiene que ir a buscar y coger las imágenes.</li>
+          <li> A continuación explicamos de donde se coge cada bloque. Estos se corresponden con los colores.
+            <div class="my-3 card">
+              <div class="card-body text-center">
+                <img src="images/tutor3_8.png" alt="Pestaña designer" class="img-fluid" />
+              </div>
+              <div class="card-footer small text-muted">
+                Lógica de la aplicación para cambiar de imagen tras pulsar un botón
+              </div>
+            </div>
+
+          </li>
+        </ol>
+
+
+      </div>
+    </div>
+    </li>
+  </div>
+  <!-- /.row -->
+
+  <!-- Team Members -->
+
+
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

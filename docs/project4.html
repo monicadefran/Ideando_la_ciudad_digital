@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Ideando la Ciudad Digital Workshop</title>
+  <title>Ideando la Ciudad Digital - Workshop</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
   <link href="css/modern-business.css" rel="stylesheet">
 
   <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
-
+  <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -26,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital - Workshop</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">Sobre Nosotros</a>
           </li>
         </ul>
       </div>
@@ -47,14 +47,14 @@
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Tutorial 4:
-      <small>Galería de imágenes</small>
+      <small>Galería de Imágenes</small>
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="index.html">Portada</a>
       </li>
-      <li class="breadcrumb-item active">Tutorial 4: Galería de imágenes</li>
+      <li class="breadcrumb-item active">Tutorial 4: Galería de Imágenes</li>
     </ol>
 
     <!-- Intro Content -->
@@ -64,160 +64,302 @@
       </div>
       <div class="col-12 col-md-6">
         <h2>Objetivo:</h2>
-        <p>El objetivo de este tutorial es hacer una galería de imágenes que funcionen con un botón de next. Dentro de
-          ese bloque vamos a aprender como se comportan ciertos elementos de appInventor y el funcionamiento del bloque
-          if else</p>
+        <p>El objetivo de este tutorial es hacer una galería de imágenes que vaya mostrando las diferentes imágenes por
+          medio de un botón "Next". En este tutorial se explicará como se puede incluir recursos adicionales dentro de
+          la aplicación y mostrará un ejemplo del uso del bloque Si-si no/If-else.</p>
       </div>
       <div class="col-12">
         <h2>Pasos a Seguir</h2>
-        <ol>
-          <li>Abrir el entorno de desarrollo App Inventor.
-            <ol type="a">
-              <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
-              <li>Pulsar el botón create app!</li>
-              <li>Selecciona una cuenta de Google</li>
-            </ol>
-          </li>
-
-
-
-          <li>Pulsa el menú Projects -> Star new project
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Creando nuevo proyecto
-              </div>
-            </div>
-          </li>
-          <li> Añadir las tres imágenes del galería de imágenes que vamos a crear...(Descargar el proyecto que se
-            proporciona en el botón)</li>
-          <li> Lo primero que hacemos es decargar el siguiente archivo. </li>
-          <div class="card-footer small text-muted">
-            <a href="images/imagenes.zip" download="imagenes.zip">
-              <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar archivo (.zip) </button>
-            </a>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            1. Acceso al Entorno
           </div>
-          <li> Descomprime el archivo .zip y añade las imagenes al aparado de recursos media como te mostramos
-            acontinuación
-            <ul>
-              <li>Ve al apartado Media, situado abajo a la derecha, y presionar el bóton Upload File para cargar las
-                imágenes como se muestra a continuación</li>
-            </ul>
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_0.png" alt="Pestaña designer" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Agregar recursos externos (imágenes) al proyecto.
-              </div>
-            </div>
-          </li>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Abrir el entorno de desarrollo App Inventor.
+                    <ol type="a">
+                      <li>Accede a la siguiente dirección: <a
+                          href="https://appinventor.mit.edu/">https://appinventor.mit.edu/</a></li>
+                      <li>Pulsa el botón create app!</li>
+                      <li>Selecciona una cuenta de Google</li>
+                      <li>Acepta los términos y condiciones (solo la primera vez que se accede a la plataforma)</li>
+                    </ol>
+                  </li>
+                </ul>
 
-          <li>Añadimos un elemento botón y un elemento imágen</li>
-          <li>En la parte de propiedades de cada elemento, primero cambiamos las propiedades de la imagen, Height: Fill
-            partent... y Width: Fill partent... En Picture eleguimos las tres imágenes (img1.jpg, img2.jpg, img3.jpg) y
-            nos aseguramos de que el botón de check de ScalePictureToFit esté selccionado. Cambiamos el nombre del botón
-            a Nextboton, con los botónes que encontramos en Components
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_2.png" alt="Pestaña designer" class="img-fluid" />
               </div>
-              <div class="card-footer small text-muted">
-                Configuración del componente imagen que dónde será mostrada las diferentes imagénes.
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b1.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
-          </li>
-          <li>Nos vamos a la parte de desarrollo para implementar toda la lógica de la aplicación
-            <ol>
-              <li> Los primero que vamos hacer es crear una variable global, que encontramos en el bloque de Variables.
-                Y lo vamos a unir con una lista donde vamos a integrar las tres imágnes que tenemos en media, como se
-                muestra en la imágen de abajo.</li>
-              <ul>
-                <li> Por defecto algunos elementos de appInventor vienen con ciertas propiedades que podemos cambiar. En
-                  el caso de la lista vamos a añadir un Item más para poder tener nuestras tres imagenes. Para ello
-                  pinchamos en la rudeda dentada de la izquierda del elemento y arrastrando añadimos el item.</li>
-              </ul>
-            </ol>
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_3.png" alt="Varaible global con lista" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Añadir cabidad para poner más piezas.
-              </div>
-            </div>
-          </li>
-          <li> Ahora vamos a darle un nombre a la variable global: imageFiles. El primer modulo de programación nos
-            quedaría como acontinuación.
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_5.png" alt="Varaible global con lista" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Creación e inicialización de la variable imageFiles con la lista de imagenes
-              </div>
-            </div>
-          </li>
-          <li> El siguiente paso es iniciar otra varaible global que nos va a ayudar a recorrer la lista. Esta varaible
-            la vamos a llamar "index", y la vamos a iniciar en 1, para hacer referencia al primer elemento de la lista
-            (img1.jpg). Deberíamos tener algo parecido a la imagen que mostramos a continuación.
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_6.png" alt="Varaible global index" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Inicialización de la variable index a 1.
-              </div>
-            </div>
-          </li>
-          <li> Por útimo vamos a implementar la lógica del botón. El funcionamiento del botón responde a que cada vez
-            que hacemos click pasa a la siguiente imágen.
-            <ol>
-              <li> Lo primero es elegir uno de los elementos de control del botón y que cuando pulsemos el botón ocurra
-                algo.</li>
-              <li> Después debemos inroduccir dentro del comportamiento del botón la lógica del if.</li>
-              <li> La condición dentro del if la ponemos de la siguiene manera, si la variable global index es menor que
-                la longuitud de la lista de la variable global de imágenes, le sumamos 1 a la variable global index,
-                sino lo que hacemos es que la variable global index sea 1, como al inicio. Como se muestra acontinuación
-              </li>
-            </ol>
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_7.png" alt="Pestaña designer" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Lógica de la aplicación para cambiar de imagen tras pulsar un botón
-              </div>
-            </div>
-          </li>
-          <li> En el útimo bloque lo que hacemos es decirle donde tiene que ir a buscar y coger las imágenes.</li>
-          <li> A continuación explicamos de donde se coge cada bloque. Estos se corresponden con los colores.
-            <div class="my-3 card">
-              <div class="card-body text-center">
-                <img src="images/tutor3_8.png" alt="Pestaña designer" class="img-fluid" />
-              </div>
-              <div class="card-footer small text-muted">
-                Lógica de la aplicación para cambiar de imagen tras pulsar un botón
-              </div>
-            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-          </li>
-        </ol>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            2. Creación de un proyecto nuevo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulsa el botón “Start new proyect” y pon de nombre al proyecto "Galería de Imágenes"</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            3. Descarga de recursos adicionales.
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Descargue del siguiente fichero y extráiga las imágenes del fichero comprimido.</li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <div class="row">
+                      <img src="images/img1.jpg" alt="botón de upload" class="img-fluid col-4" />
+                      <img src="images/img2.jpg" alt="botón de upload" class="img-fluid col-4" />
+                      <img src="images/img3.jpg" alt="botón de upload" class="img-fluid col-4" />
+                    </div>
+                    
+                  </div>
+                  <div class="card-footer small text-muted">
+                    <a href="images/imagenes.zip" download="imagenes.zip">
+                      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            4. Importación de recursos adicioanles
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Importe las imágenes como recursos Media dentro de la aplicación</li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor3_0.png" alt="variable con lista vacia" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Creación de una lista vacia
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c4.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            5. Definir Acción cuando el botón es pulsado
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Tras ello se indicará que tras pulsar el botón se encenderá el modo leer código de barras o código
+                    QR</li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/activarQRReader.png" alt="variable con lista vacia" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Inicio de lectura de Código QR o Código de Barras tras pulsar el botón
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c5.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            6. Implementar la lógica cuando un Código de Barras es leído
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>A continuación, se describe la lógica que se debe ejecutar tras leer un código de barras (más
+                    abajo se muestra una imagen con la lógica ya implementada):
+                    <ol type="a">
+                      <li>Se debe introducir un bloque que permita incluir instrucciones tras leer el código de barras o
+                        QR. Este tipo de bloque se obtener al pulsar sobre "ScanComponent" que es un componete visual ya
+                        incluido con la importación del proyecto.
+                      </li>
+                      <li>Como primera acción se debería de revisar si el código leído es un número. Para ello, haga uso
+                        del bloque de control "Si"/"If".</li>
+                      <li>Para determinar la lógica del último bloque, haga uso del bloque de matemáticas
+                        número?/number? con el valor leído tras escanear un código (variable result).</li>
+                      <li>Para el caso de ser un número, reproduzca el sonido del componente Sound1 haciendo uso de sus
+                        bloques.</li>
+                      <li>A continuación, cree una variable local llamada "randomPrice" que almacene un número aleatorio
+                        entre el 3 y el 20 (esto simulará un precio de producto).
+                      </li>
+                      <li>Escriba el valor aleatorio de la variable "randomPrice" como texto en el componente
+                        "ProductPrice" para que aparezca en la interfaz visual.</li>
+                      <li>Además, agregue el valor generado en la lista de productos leídos. Haga uso de la familia de
+                        componetes integrados Lista/List para agregar un elemento a una lista.</li>
+                      <li>Actualice el componete visual "ProductList" con el valor de la lista para que se refresque la
+                        interfaz visual.</li>
+                      <li>Por último, calcule el precio total haciendo una suma del precio total más el valor aleatorio.
+                      </li>
+                      <li>Para indicar la lógica en el caso de que el valor leído no sea un número, se deberá de pulsar
+                        el engranaje el componente de bifucación Si/If e incluir el bloque sino/else.</li>
+                      <li>Dentro de esta sección, se puede implementar la lógica para mostrar un mensaje de alerta.</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c6.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="card">
+                <div class="card-body text-center">
+                  <img src="images/leyendoCodigoQR.png" alt="variable con lista vacia" class="img-fluid" />
+                </div>
+                <div class="card-footer small text-muted">
+                  Lógica tras leer el código de barras o código QR
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            7. Compilación de la aplicación e instalación en el dispositivo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulse el botón de Construir "Build" y seleccione proporcionar código QR para la aplicación QR</li>
+                  <li>Lea el código QR con su dispositivo Android y descargue la aplicación</li>
+                  <li>Si es la primera vez que instala una aplicación desde App Inventor es necesario permitir
+                    al dispositivo móvil instalar aplicaciones de origen desconocido (es decir, aplicaciones fuera del
+                    Google Play Store). Para ello:
+                    <ul>
+                      <li>Si durante el primer intento de instalación le proporcione un acceso directo a Ajustes->
+                        Seguridad seleccione instalar aplicaciones de origen desconocido</li>
+                      <li>Si tan solo le deniega la posibilida de instalar. Siga los siguientes pasos:
+                        <ol type="a">
+                          <li>Vaya a Ajustes de su dispositivo Android (Settings)</li>
+                          <li>Acceda a la opción de Seguridad</li>
+                          <li>Marque el checkbox de permitir instalaciones de origen desconocido</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Tras tener acceso a instalaciones de origen desconocido, intente instalar la aplicación de nuevo.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c7.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    </li>
-  </div>
-  <!-- /.row -->
-
-  <!-- Team Members -->
-
-
-
-
+    <!-- /.row -->
   </div>
   <!-- /.container -->
 
