@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Ideando la Ciudad Digital Workshop</title>
+  <title>Ideando la Ciudad Digital - Workshop</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,7 @@
   <link href="css/modern-business.css" rel="stylesheet">
 
   <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -25,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital Workshop</a>
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital - Workshop</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -34,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">Sobre Nosotros</a>
           </li>
         </ul>
       </div>
@@ -46,104 +47,370 @@
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Tutorial 5:
-      <small>Talk to me (con acelerómetro)</small>
+      <small>Talk to me</small>
     </h1>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="index.html">Portada</a>
       </li>
-      <li class="breadcrumb-item active">Tutorial 5:Talk to me (con acelerómetro)</li>
+      <li class="breadcrumb-item active">Tutorial 5: Talk to me</li>
     </ol>
 
     <!-- Intro Content -->
     <div class="row">
       <div class="col-12 col-md-6">
-        <img class="img-fluid rounded mb-4" src="images/img_inicio_tutor4_0.png" alt="">
+        <img class="img-fluid rounded mb-4" src="images/tutor4_0.png" alt="">
       </div>
       <div class="col-12 col-md-6">
         <h2>Objetivo:</h2>
-        <p>El objetivo de este tutorial es hacer una aplicación donde podamos introduccir texto y escucharlo. También
-          haremos que cada vez que agitamos el teléfono se dispara un evento que en este caso es un texto predeterminado
-        </p>
+        <p>El objetivo de este tutorial es mostrar cómo el comportamiento de la aplicación puede ser lanzado desde
+          diferentes tipos de eventos. Cuando un botón sea pulsado, pase una cantidad de segundos determinada o se agite
+          el dispositivo el móvil empezará a hablar.</p>
       </div>
       <div class="col-12">
         <h2>Pasos a Seguir</h2>
-        <ol>
-          <li>Abrir el entorno de desarrollo App Inventor.
-            <ol type="a">
-              <li><a href="http://appinventor.mit.edu/explore/#">http://appinventor.mit.edu/explore/#</a></li>
-              <li>Pulsar el botón create app!</li>
-              <li>Selecciona una cuenta de Google</li>
-            </ol>
-          </li>
-          <li>Pulsa el menú Projects -> Star new project </li>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            1. Acceso al Entorno
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Abrir el entorno de desarrollo App Inventor.
+                    <ol type="a">
+                      <li>Accede a la siguiente dirección: <a
+                          href="https://appinventor.mit.edu/">https://appinventor.mit.edu/</a></li>
+                      <li>Pulsa el botón create app!</li>
+                      <li>Selecciona una cuenta de Google</li>
+                      <li>Acepta los términos y condiciones (solo la primera vez que se accede a la plataforma)</li>
+                    </ol>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b1.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
-          <li> Lo primero que vamos hacer es crear un campo de texto y después vamos a añadir un botón</li>
-          <div class="card-body text-center">
-            <img src="images/tutor4_1.png" alt="Añadir los elementos" class="img-fluid" />
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
           </div>
-          <li> Seguidamente vamos a añadir el elemento TextToSpeech que vamos a encontrar en la pestaña de media. Este
-            elemento se posicionará como un componente no visble</li>
-          <div class="card-body text-center">
-            <img src="images/tutor4_2.png" alt="Pesaña de media" class="img-fluid" />
-          </div>
-          <li>Ahora vamos a implementar la lógica de nuetra app. Para ello lo que vamos a cambiar a la parte de Blocks.
-          </li>
-          <li> Primero vamos a diseñar la lógica del botón</li>
-          <ol>
-            <li> Incluimos la caja del botón que nos permite generar una interacción cuando lo pulsamos</li>
-            <li> Después tenemos que añadir el llamamiento al texto para que lo hable</li>
-            <li> Por último tenemos que añadir como input el texto añadido por el usuario, como podemos ver en la imágen
-              siguiente</li>
-          </ol>
-          <div class="my-3 card">
-            <div class="card-body text-center">
-              <img src="images/tutor4_3.png" alt="Añadimos la logica del boton" class="img-fluid" />
-            </div>
-          </div>
-
-          <li> Seguidamente vamos a programar la acción del acelerómetro, para ello hay que añadirlo como elemento
-            primero</li>
-          <div class="card-body text-center">
-            <img src="images/tutor4_4.png" alt="Añadir el acelerometro" class="img-fluid" />
-          </div>
-          <li> Vamos a generar la lógica del acelerómetro.</li>
-          <ol>
-            <li> Añadimos el bloque del aclelerómetro que actuará cuando agitamos el móvil</li>
-            <li> Después tenemos que añadir el llamamiento al texto que va a sonar cuando movamos el móvil</li>
-            <li> Por último tenemos que añadir el texto que queremos que suene</li>
-          </ol>
-          <div class="card-body text-center">
-            <img src="images/tutor4_5.png" alt="Programacion del acelerometro" class="img-fluid" />
-          </div>
-
-
-          <!-- Team Members -->
-
-
-
-
-      </div>
-      <!-- /.container -->
-
-      <!-- Footer -->
-      <footer class="py-5 bg-dark">
-        <div class="container">
-          <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
-            Montero Montes. Universidad Carlos III de Madrid.</p>
         </div>
-        <!-- /.container -->
-      </footer>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="js/script.js"></script>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            2. Creación de un proyecto nuevo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulsa el botón “Start new proyect” y pon de nombre al proyecto "Talk_to_me"</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            3. Replica la interfaz de usuario
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra los componentes desde el lateral izquierdo para replicar la interfaz de usuario.
+                  </li>
+                </ul>
+                <!--<div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    <a href="projects/cashRegister.aia" download="CashRegister.aia">
+                      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar proyecto (.aia)
+                      </button>
+                    </a>
+                  </div>
+                </div>-->
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor4_1.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Componente visual campo de texto y botón.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            4. Añada voz a la aplicación
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el componente no visual "TextToSpeech" a la interfaz de usuario.</li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor4_2.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Componente no visual TextToSpeech.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            5. Defina la lógica de hablar tras pulsar el botón
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Defina la siguiente lógica cuando sea pulsado el botón.</li>
+                </ul>
+                <!--<div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/createList.png" alt="variable con lista vacia" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Creación de una lista vacia
+                  </div>
+                </div>-->
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor4_3.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Lógica cuando se pulsa el botón.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            6. Añada el acelerómetro a la aplicación
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastre el sensor de acelerómetro desde el lateral izquierdo a la aplicación</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor4_4.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Inclusión del sensor de acelerómetro en la aplicación.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            7. Implementar la lógica cuando el móvil es agitado
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Implemente una lógica que se ejecute cuando el sensor detecta que el móvil está siendo agitado. La
+                    lógica deberá hacer que el móvil se queje.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor4_5.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Lógica que se ejecuta cuando el móvil es agitado.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            10. Compilación de la aplicación e instalación en el dispositivo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulse el botón de Construir "Build" y seleccione proporcionar código QR para la aplicación QR</li>
+                  <li>Lea el código QR con su dispositivo Android y descargue la aplicación</li>
+                  <li>Si es la primera vez que instala una aplicación desde App Inventor es necesario permitir
+                    al dispositivo móvil instalar aplicaciones de origen desconocido (es decir, aplicaciones fuera del
+                    Google Play Store). Para ello:
+                    <ul>
+                      <li>Si durante el primer intento de instalación le proporcione un acceso directo a Ajustes->
+                        Seguridad seleccione instalar aplicaciones de origen desconocido</li>
+                      <li>Si tan solo le deniega la posibilida de instalar. Siga los siguientes pasos:
+                        <ol type="a">
+                          <li>Vaya a Ajustes de su dispositivo Android (Settings)</li>
+                          <li>Acceda a la opción de Seguridad</li>
+                          <li>Marque el checkbox de permitir instalaciones de origen desconocido</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Tras tener acceso a instalaciones de origen desconocido, intente instalar la aplicación de nuevo.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c7.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
