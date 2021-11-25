@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Ideando la Ciudad Digital - Workshop</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+  <link href="vendor/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Ideando la Ciudad Digital - Workshop</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">Sobre Nosotros</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Tutorial 10:
+      <small>Madrid Tour</small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Portada</a>
+      </li>
+      <li class="breadcrumb-item active">Tutorial 10: Madrid Tour</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img class="img-fluid rounded mb-4" src="images/tutor_10.png" alt="">
+      </div>
+      <div class="col-12 col-md-6">
+        <h2>Objetivo:</h2>
+        <p>El objetivo de este tutorial es mostrar cómo realizar un proyecto donde diseñamos un tour en la ciudad de Madrid. 
+          Para ello integremos un mapa y interactuamos con los distintos marcadores sobre el.</p>
+      </div>
+      <div class="col-12">
+        <h2>Pasos a Seguir</h2>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            1. Acceso al Entorno
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>
+                    Abrir el entorno de desarrollo App Inventor.
+                    <ol type="a">
+                      <li>Accede a la siguiente dirección: <a
+                          href="https://appinventor.mit.edu/">https://appinventor.mit.edu/</a></li>
+                      <li>Pulsa el botón create app!</li>
+                      <li>Selecciona una cuenta de Google</li>
+                      <li>Acepta los términos y condiciones (solo la primera vez que se accede a la plataforma)</li>
+                    </ol>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            2. Creación de un proyecto nuevo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulsa el botón “Start new proyect” y pon de nombre al proyecto "Madrid_Tour"</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/b2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            3. Organiza la pantalla (Screen1). 
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Cambia el nombre del título de screen1 a “Madrid Tour” y el color de fondo. 
+                    Nosotros hemos elegido el naranja, pero podéis seleccionar el que más os guste.
+                  </li>
+                </ul>
+                <!--<div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/import.png" alt="Pestaña designer" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    <a href="projects/cashRegister.aia" download="CashRegister.aia">
+                      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar proyecto (.aia)
+                      </button>
+                    </a>
+                  </div>
+                </div>-->
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_3.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Componente screen1, cambio título y color de fondo.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            4. Añada componente mapa. 
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el elemento mapa desde el lateral izquierdo situado en la pestaña de “Mapas”. 
+                    Cambiar las siguientes propiedades.</li>
+                  <li>Alto: 40 %</li>
+                  <li>Ancho: Ajustar al contendor</li>
+                  <li>CentreFromString: 40.396428, -3.696044</li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_5.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Componente mapa con marcadores.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            5. Añade los marcadores 
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Arrastra el elemento marker desde el lateral izquierdo situado en la pestaña de “Mapas” y añade tres marcadores (Marker). 
+                    Cambiar las siguientes propiedades.</li>
+                  <ul><b>Marker1:</b>
+                    <li>Latitud: 40.3846525405142</li>
+                    <li>Longitud: -3.6946181952953343</li>
+                    <li>Título: Madrid Rio 1</li>
+                  </ul>
+                  <ul><b>Marker2:</b>
+                    <li>Latitud: 40.39171302205754</li>
+                    <li>Longitud: -3.701141327619553</li>
+                    <li>Título: Madrid Rio 2</li>
+                  </ul>
+                  <ul><b>Marker3:</b>
+                    <li>Latitud: 40.39847964363539</li>
+                    <li>Longitud: -3.7129598110914235</li>
+                    <li>Título: Madrid Rio 3</li>
+                  </ul>
+                </ul>
+                <!--<div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/createList.png" alt="variable con lista vacia" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Creación de una lista vacia
+                  </div>
+                </div>-->
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_5.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Mapa y marcadores.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            6. Añada los botones que van a ir coordinados con los marcadores.
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Añade tres botones y ajusta la propiedad de ancho de cada uno a “Ajustar al contendor”.</li>
+                  <li>Cambia la propiedad de texto del botón a cada uno de ellos según el orden, el primero se llamará <b>“Madrid Rio 1”</b>, el segundo <b>“Madrid Rio 2”</b> y el tercero <b>“Madrid Rio 3”</b>. </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_5.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Botones de la aplicación.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            7. Añade el elemento imagen.
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Añade el elemento imagen dejado de los botones y dale las siguientes propiedades.
+                    <li>Alto: Ajustar al contendor</li>
+                    <li>Ancho: Ajustar al contendor</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_7a.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Elemento imagen.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            8. Sube los archivos de imágenes.
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Descárgate el archivo .zip y añade desde la ventana de medios las siguientes imágenes.(imag_tuto_map.zip)</li>
+                </ul>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/imag_tuto_map3.jpeg" alt="botón de upload" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    <a href="images/imag_tuto_map.zip" download="imag_tuto_map.zip">
+                      <button type="button" class="btn btn-success btn-block" id="copyButton">Descargar imagen</button>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_7b.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Lista de imagenes añadidas.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            9. Implementar la lógica de los botones.
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Implementa una lógica para cuando se pulsa los distintos botones y nos muestra las ubicaciones y una imagen del tour.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_8a.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Implementación del botón.
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            10. Pista para copiar elemntos de lógica
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Llevar el bloque a la mochila para poderlo duplicar las veces necesarias.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/10_8b.png" alt="botón del monitor serial" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Elemnto mochila de la interfaz
+                  </div>
+                </div>
+              </div>
+              <!--<div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c2.mp4" type="video/mp4">
+                </video>
+              </div>-->
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+        <h1 class="text-center text-secondary fs-1">
+          &#x21A7;
+        </h1>
+        <div class="card">
+          <div class="card-header bg-dark outline-step">
+            11. Compilación de la aplicación e instalación en el dispositivo
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>Pulse el botón de Construir "Build" y seleccione proporcionar código QR para la aplicación QR</li>
+                  <li>Lea el código QR con su dispositivo Android y descargue la aplicación</li>
+                  <li>Si es la primera vez que instala una aplicación desde App Inventor es necesario permitir
+                    al dispositivo móvil instalar aplicaciones de origen desconocido (es decir, aplicaciones fuera del
+                    Google Play Store). Para ello:
+                    <ul>
+                      <li>Si durante el primer intento de instalación le proporcione un acceso directo a Ajustes->
+                        Seguridad seleccione instalar aplicaciones de origen desconocido</li>
+                      <li>Si tan solo le deniega la posibilida de instalar. Siga los siguientes pasos:
+                        <ol type="a">
+                          <li>Vaya a Ajustes de su dispositivo Android (Settings)</li>
+                          <li>Acceda a la opción de Seguridad</li>
+                          <li>Marque el checkbox de permitir instalaciones de origen desconocido</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Tras tener acceso a instalaciones de origen desconocido, intente instalar la aplicación de nuevo.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <video class="img-fluid" autoplay controls muted loop>
+                  <source src="videos/c7.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-dark text-white text-right">
+            <button type="button" class="btn btn-success btn-sm toggle-task-completed">
+              Paso completado
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Taller Ideando la ciudad digital. Mónica Sánchez de Francisco y Álvaro
+        Montero Montes. Universidad Carlos III de Madrid.</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
