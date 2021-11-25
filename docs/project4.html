@@ -146,6 +146,9 @@
                 <ul>
                   <li>Descargue del siguiente fichero y extráiga las imágenes del fichero comprimido.</li>
                 </ul>
+                
+              </div>
+              <div class="col-lg-6">
                 <div class="my-3 card">
                   <div class="card-body text-center">
                     <div class="row">
@@ -153,7 +156,7 @@
                       <img src="images/img2.jpg" alt="botón de upload" class="img-fluid col-4" />
                       <img src="images/img3.jpg" alt="botón de upload" class="img-fluid col-4" />
                     </div>
-                    
+
                   </div>
                   <div class="card-footer small text-muted">
                     <a href="images/imagenes.zip" download="imagenes.zip">
@@ -161,11 +164,6 @@
                     </a>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-6">
-                <video class="img-fluid" autoplay controls muted loop>
-                  <source src="videos/c3.mp4" type="video/mp4">
-                </video>
               </div>
             </div>
           </div>
@@ -189,6 +187,8 @@
                 <ul>
                   <li>Importe las imágenes como recursos Media dentro de la aplicación</li>
                 </ul>
+              </div>
+              <div class="col-lg-6">
                 <div class="my-3 card">
                   <div class="card-body text-center">
                     <img src="images/tutor3_0.png" alt="variable con lista vacia" class="img-fluid" />
@@ -198,11 +198,12 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
+
+              <!--<div class="col-lg-6">
                 <video class="img-fluid" autoplay controls muted loop>
                   <source src="videos/c4.mp4" type="video/mp4">
                 </video>
-              </div>
+              </div>-->
             </div>
           </div>
           <div class="card-footer bg-dark text-white text-right">
@@ -217,28 +218,32 @@
 
         <div class="card">
           <div class="card-header bg-dark outline-step">
-            5. Definir Acción cuando el botón es pulsado
+            5. Diseño de la Interfaz de Usuario
           </div>
           <div class="card-body">
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li>Tras ello se indicará que tras pulsar el botón se encenderá el modo leer código de barras o código
-                    QR</li>
+                  <li>Coloque un componente de imagen y un componente botón en la intarfaz con las siguientes configuraciones:
+                    <ol type="a">
+                      <li>Imagen.With: Fill Parent // Imagen.Ancho: Ajustar al contenedor</li>
+                      <li>Imagen.Height: Fill Parent // Imagen.Alto: Ajustar al contenedor</li>
+                      <li>Imagen.Picture: img1.jpg // Imagen.Imagen: img1.jpg (Seleccionarlo entre los recursos ya cargados)</li>
+                      <li>Botón.With: Fill Parent // Imagen.Ancho: Ajustar al contenedor</li>
+                      <li>Botón.Text: "Next" // Imagen.Texto: "Siguiente"</li>
+                    </ol>
+                  </li>
                 </ul>
-                <div class="my-3 card">
-                  <div class="card-body text-center">
-                    <img src="images/activarQRReader.png" alt="variable con lista vacia" class="img-fluid" />
-                  </div>
-                  <div class="card-footer small text-muted">
-                    Inicio de lectura de Código QR o Código de Barras tras pulsar el botón
-                  </div>
-                </div>
               </div>
               <div class="col-lg-6">
-                <video class="img-fluid" autoplay controls muted loop>
-                  <source src="videos/c5.mp4" type="video/mp4">
-                </video>
+                <div class="my-3 card">
+                  <div class="card-body text-center">
+                    <img src="images/tutor3_2.png" alt="variable con lista vacia" class="img-fluid" />
+                  </div>
+                  <div class="card-footer small text-muted">
+                    Propiedades del componente imagen
+                  </div>
+                </div>
               </div>
             </div>
           </div>
